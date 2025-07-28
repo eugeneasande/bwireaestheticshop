@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bwire Aesthetic Shop</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles & Configuration -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc; /* A very light grey for contrast */
+        }
+        /* Custom Electric Blue color */
+        .bg-electric-blue { background-color: #007BFF; }
+        .text-electric-blue { color: #007BFF; }
+        .border-electric-blue { border-color: #007BFF; }
+        .ring-electric-blue { --tw-ring-color: #007BFF; }
+
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Simple animation for page transitions */
+        .page {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- App Container -->
+    <div id="app" class="min-h-screen flex flex-col">
+
+        <!-- Header -->
+        <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-40">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <!-- Logo -->
+                    <a href="#" class="flex items-center space-x-2 nav-link" data-page="home">
+                        <div class="bg-gray-900 text-white p-2 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-electric-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-gray-900">Bwire Aesthetic Shop</span>
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#" class="text-gray-600 hover:text-electric-blue transition-colors duration-300 nav-link" data-page="home">Home</a>
+                        <a href="#" class="text-gray-600 hover:text-electric-blue transition-colors duration-300 nav-link" data-page="shop">Shop</a>
+                        <a href="#" class="text-gray-600 hover:text-electric-blue transition-colors duration-300 nav-link" data-page="about">About Us</a>
+                        <a href="#" class="text-gray-600 hover:text-electric-blue transition-colors duration-300 nav-link" data-page="contact">Contact</a>
+                        <a href="#" class="text-gray-600 hover:text-electric-blue transition-colors duration-300 nav-link" data-page="blog">Blog</a>
+                    </div>
+
+                    <!-- Right side icons -->
+                    <div class="flex items-center space-x-4">
+                        <button id="cart-button" class="relative text-gray-600 hover:text-electric-blue transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span id="cart-count" class="absolute -top-2 -right-2 bg-electric-blue text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                        </button>
+                        <button class="nav-link text-gray-600 hover:text-electric-blue transition-colors duration-300" data-page="dashboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </button>
+                         <!-- Mobile Menu Button -->
+                        <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-electric-blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                 <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden py-4">
+                    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded nav-link" data-page="home">Home</a>
+                    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded nav-link" data-page="shop">Shop</a>
+                    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded nav-link" data-page="about">About Us</a>
+                    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded nav-link" data-page="contact">Contact</a>
+                    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded nav-link" data-page="blog">Blog</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow">
+            <!-- Page: Home -->
+            <div id="home-page" class="page">
+                <!-- Hero Section -->
+                <section class="bg-gray-900 text-white">
+                    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 text-center">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">Quality Tech, Aesthetic Vibe.</h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your one-stop shop for electronics and phone accessories in Kenya. Built for the modern you.</p>
+                        <a href="#" class="bg-electric-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 duration-300 nav-link" data-page="shop">Shop Now</a>
+                    </div>
+                </section>
+
+                <!-- Categories Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-3xl font-bold text-center mb-10">Shop by Category</h2>
+                        <div id="home-categories" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                            <!-- Categories will be injected by JS -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured Products Section -->
+                <section class="py-16 bg-gray-50">
+                    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-3xl font-bold text-center mb-10">Featured Products</h2>
+                        <div id="featured-products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <!-- Products will be injected by JS -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Testimonials Section -->
+                <section class="py-16 bg-white">
+                    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-3xl font-bold text-center mb-10">What Our Customers Say</h2>
+                        <div id="testimonials" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                           <!-- Testimonials will be injected by JS -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Page: Shop -->
+            <div id="shop-page" class="page hidden">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <h1 class="text-4xl font-bold mb-8">Our Products</h1>
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <!-- Filters -->
+                        <aside class="w-full md:w-1/4 lg:w-1/5">
+                            <h2 class="text-2xl font-semibold mb-4">Filters</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="font-semibold mb-2">Category</h3>
+                                    <div id="filter-category" class="space-y-1"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-2">Brand</h3>
+                                    <div id="filter-brand" class="space-y-1"></div>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-2">Price Range</h3>
+                                    <input type="range" id="filter-price" min="0" max="150000" step="1000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                                    <div class="flex justify-between text-sm mt-1">
+                                        <span>Ksh 0</span>
+                                        <span id="price-filter-value">Ksh 150000</span>
+                                    </div>
+                                </div>
+                                <button id="apply-filters" class="w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-700 transition">Apply Filters</button>
+                                <button id="reset-filters" class="w-full bg-gray-200 text-gray-800 py-2 rounded-lg hover:bg-gray-300 transition">Reset Filters</button>
+                            </div>
+                        </aside>
+                        <!-- Product Grid -->
+                        <main id="shop-products-grid" class="w-full md:w-3/4 lg:w-4/5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+                            <!-- Products will be injected by JS -->
+                        </main>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Product Details -->
+            <div id="product-page" class="page hidden">
+                <!-- Product details will be injected by JS -->
+            </div>
+
+            <!-- Page: About Us -->
+            <div id="about-page" class="page hidden">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h1 class="text-4xl font-bold mb-4">About Bwire Aesthetic Shop</h1>
+                        <p class="text-xl text-gray-600 mb-8">More than just a store. We're a vibe.</p>
+                    </div>
+                    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-bold mb-4">Our Story</h2>
+                        <p class="text-gray-700 mb-4">
+                            Bwire Aesthetic Shop was born in the heart of Nairobi from a simple idea: technology should be both functional and beautiful. We saw a gap in the Kenyan market for high-quality, aesthetically pleasing electronics and accessories that didn't break the bank. We wanted to create a space where tech-savvy youth and young professionals could find products that match their style and digital lifestyle.
+                        </p>
+                        <h2 class="text-2xl font-bold mb-4">Our Promise</h2>
+                        <p class="text-gray-700">
+                            Rooted in Kenya, we are committed to sourcing the best products and offering them at affordable prices. Quality, reliability, and customer satisfaction are the pillars of our brand. We're not just selling gadgets; we're curating a collection of tech that enhances your everyday life. Welcome to the BAS family!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Contact -->
+            <div id="contact-page" class="page hidden">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <h1 class="text-4xl font-bold text-center mb-10">Get In Touch</h1>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Contact Info -->
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+                            <div class="space-y-4">
+                                <p class="flex items-center"><svg class="w-6 h-6 mr-3 text-electric-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> support@bwireaesthetic.co.ke</p>
+                                <a href="https://wa.me/254712345678" target="_blank" class="flex items-center text-green-500 hover:text-green-600 font-semibold"><svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.888-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg> Chat on WhatsApp</a>
+                                <p class="flex items-center"><svg class="w-6 h-6 mr-3 text-electric-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> Pickup Point: Moi Avenue, Nairobi CBD</p>
+                            </div>
+                            <div class="mt-8">
+                                <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-gray-500 hover:text-electric-blue"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg></a>
+                                    <a href="#" class="text-gray-500 hover:text-electric-blue"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.298 1.634 4.212 3.791 4.649-.69.188-1.432.233-2.193.084.606 1.883 2.362 3.252 4.446 3.29-1.716 1.34-3.873 2.1-6.23 2.1-.403 0-.802-.024-1.195-.07 2.225 1.423 4.881 2.248 7.748 2.248 9.297 0 14.391-7.724 14.391-14.391 0-.219 0-.437-.015-.654.987-.712 1.843-1.6 2.539-2.643z"></path></svg></a>
+                                    <a href="#" class="text-gray-500 hover:text-electric-blue"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22.999 6.437c-.001-.001-.001-.002 0 0h-3.296l-1.121 4.84-1.456-4.84h-2.24l-1.455 4.84-1.121-4.84h-3.296l2.122 8.753-2.122 8.81h3.296l1.121-4.84 1.456 4.84h2.24l1.455-4.84 1.121 4.84h3.296l-2.122-8.81 2.122-8.753zM.001 6.437h3.296l2.122 8.753-2.122 8.81h-3.296l2.122-8.81-2.122-8.753z"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contact Form -->
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <h2 class="text-2xl font-bold mb-6">Send us a Message</h2>
+                            <form id="contact-form">
+                                <div class="mb-4">
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                    <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                    <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-electric-blue text-white py-3 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-electric-blue transition">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Blog -->
+            <div id="blog-page" class="page hidden">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <h1 class="text-4xl font-bold text-center mb-10">Tech Tips & Reviews</h1>
+                    <div id="blog-posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Blog posts will be injected by JS -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Page: Customer Dashboard -->
+            <div id="dashboard-page" class="page hidden">
+                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <h1 class="text-4xl font-bold text-center mb-10">My Dashboard</h1>
+                    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                        <div id="login-view">
+                            <h2 class="text-2xl font-bold mb-6 text-center">Login or Sign Up</h2>
+                            <p class="text-center text-gray-600 mb-6">This is a simulation. Login/ Signup Coming Soon</p>
+                             <div class="flex justify-center">
+                                <button id="login-button" class="bg-electric-blue text-white py-2 px-8 rounded-lg hover:bg-blue-600 transition">Log In (Simulated)</button>
+                            </div>
+                        </div>
+                        <div id="dashboard-view" class="hidden">
+                            <div class="flex justify-between items-center mb-8">
+                                <h2 class="text-2xl font-bold">Welcome, User!</h2>
+                                <button id="logout-button" class="text-sm text-red-500 hover:underline">Log Out</button>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-4 border-b pb-2">Order History</h3>
+                            <div id="order-history" class="space-y-4">
+                                <p class="text-gray-500">No orders yet. Start shopping!</p>
+                            </div>
+                             <h3 class="text-xl font-semibold mb-4 border-b pb-2 mt-8">My Wishlist</h3>
+                            <div id="wishlist-items" class="space-y-4">
+                                <p class="text-gray-500">Your wishlist is empty.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Bwire Aesthetic Shop</h3>
+                        <p class="text-gray-400">Quality Tech, Aesthetic Vibe.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white nav-link" data-page="about">About Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white nav-link" data-page="contact">Contact</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white nav-link" data-page="shop">Shop</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Support</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Shipping Info</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Return Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Connect</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.298 1.634 4.212 3.791 4.649-.69.188-1.432.233-2.193.084.606 1.883 2.362 3.252 4.446 3.29-1.716 1.34-3.873 2.1-6.23 2.1-.403 0-.802-.024-1.195-.07 2.225 1.423 4.881 2.248 7.748 2.248 9.297 0 14.391-7.724 14.391-14.391 0-.219 0-.437-.015-.654.987-.712 1.843-1.6 2.539-2.643z"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-8 py-6 text-center text-gray-500">
+  <p>&copy; <span id="year"></span> Bwire Aesthetic Shop. All Rights Reserved. Prototype by 
+    <a href="https://www.instagram.com/eugz_asax/" target="_blank" class="text-blue-400 hover:underline">@eugz_asax</a>.
+  </p>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+            </div>
+        </footer>
+
+        <!-- Cart Modal -->
+        <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex justify-end">
+            <div id="cart-panel" class="w-full max-w-md bg-white h-full shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300">
+                <div class="flex justify-between items-center p-4 border-b">
+                    <h2 class="text-2xl font-bold">Your Cart</h2>
+                    <button id="close-cart-button" class="text-gray-500 hover:text-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <div id="cart-items" class="flex-grow p-4 overflow-y-auto">
+                    <!-- Cart items will be injected here -->
+                </div>
+                <div class="p-4 border-t">
+                    <div class="flex justify-between font-bold text-lg mb-4">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">Ksh 0</span>
+                    </div>
+                    <button id="checkout-button" class="w-full bg-electric-blue text-white py-3 rounded-lg hover:bg-blue-600 transition disabled:bg-gray-400">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Checkout Modal (Simulation) -->
+        <div id="checkout-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+            <div class="bg-white rounded-lg shadow-2xl p-8 max-w-lg w-full">
+                 <h2 class="text-2xl font-bold mb-4">Checkout</h2>
+                 <div id="checkout-form">
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" value="Test User" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" value="test@example.com" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                    </div>
+                    <h3 class="text-lg font-semibold mt-6 mb-2">Payment Method</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center p-3 border rounded-lg has-[:checked]:bg-blue-50 has-[:checked]:border-electric-blue">
+                            <input type="radio" name="payment" value="mpesa" class="h-4 w-4 text-electric-blue border-gray-300 focus:ring-electric-blue" checked>
+                            <span class="ml-3 font-medium">M-PESA</span>
+                        </label>
+                         <label class="flex items-center p-3 border rounded-lg has-[:checked]:bg-blue-50 has-[:checked]:border-electric-blue">
+                            <input type="radio" name="payment" value="card" class="h-4 w-4 text-electric-blue border-gray-300 focus:ring-electric-blue">
+                            <span class="ml-3 font-medium">Card (Pesapal/Flutterwave)</span>
+                        </label>
+                         <label class="flex items-center p-3 border rounded-lg has-[:checked]:bg-blue-50 has-[:checked]:border-electric-blue">
+                            <input type="radio" name="payment" value="cod" class="h-4 w-4 text-electric-blue border-gray-300 focus:ring-electric-blue">
+                            <span class="ml-3 font-medium">Cash on Delivery (Nairobi Only)</span>
+                        </label>
+                    </div>
+                    <div class="mt-6 flex justify-end space-x-3">
+                        <button id="close-checkout-button" class="bg-gray-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-300">Cancel</button>
+                        <button id="confirm-order-button" class="bg-electric-blue text-white py-2 px-4 rounded-lg hover:bg-blue-600">Confirm Order</button>
+                    </div>
+                 </div>
+                 <div id="order-confirmation" class="hidden text-center">
+                    <svg class="w-16 h-16 mx-auto text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h2 class="text-2xl font-bold mb-2">Order Placed Successfully!</h2>
+                    <p class="text-gray-600">Thank you for your purchase. We've sent a confirmation to your email. (This is a simulation).</p>
+                    <button id="close-confirmation-button" class="mt-6 bg-electric-blue text-white py-2 px-6 rounded-lg hover:bg-blue-600">Done</button>
+                 </div>
+            </div>
+        </div>
+
+        <!-- Notification Toast -->
+        <div id="toast" class="fixed top-5 right-5 bg-gray-900 text-white py-2 px-5 rounded-lg shadow-lg transform translate-x-[120%] transition-transform duration-500">
+            <p id="toast-message"></p>
+        </div>
+
+    </div>
+
+    <script>
+    // --- IMPORTANT BACKEND SETUP ---
+    // 1. Create a Google Sheet.
+    // 2. Create tabs: Products, Testimonials, BlogPosts, Orders, Contacts.
+    // 3. Go to Extensions > Apps Script and paste the script provided in the conclusion.
+    // 4. Deploy the script as a Web App (with "Anyone" access).
+    // 5. Paste the Web App URL here.
+    const googleScriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'; // <-- PASTE YOUR URL HERE
+
+    // --- MOCK DATA (Used if Google Script fails or is not set up) ---
+    const mockData = {
+        products: [
+            { id: 1, name: "iPhone 14 Pro Case", category: "Phone Cases", brand: "Apple", price: 2500, description: "Sleek and protective case for iPhone 14 Pro.", specs: '{"Material": "Silicone", "Color": "Midnight Black"}', imageUrls: "https://placehold.co/600x600/1a202c/ffffff?text=Case", stock: 15, featured: true },
+            { id: 2, name: "Anker PowerCore 10000", category: "Power Banks", brand: "Anker", price: 4500, description: "Compact and powerful 10000mAh power bank.", specs: '{"Capacity": "10000mAh", "Ports": "USB-A, USB-C"}', imageUrls: "https://placehold.co/600x600/007bff/ffffff?text=PowerBank", stock: 10, featured: true },
+            { id: 3, name: "Samsung 25W Fast Charger", category: "Chargers & Cables", brand: "Samsung", price: 3000, description: "Super fast charging for your Samsung devices.", specs: '{"Wattage": "25W", "Type": "USB-C"}', imageUrls: "https://placehold.co/600x600/e2e8f0/1a202c?text=Charger", stock: 20, featured: false },
+            { id: 4, name: "JBL Tune 510BT", category: "Headphones & Earbuds", brand: "JBL", price: 6000, description: "Wireless on-ear headphones with pure bass sound.", specs: '{"Connectivity": "Bluetooth 5.0", "Battery": "40 hours"}', imageUrls: "https://placehold.co/600x600/1a202c/ffffff?text=Headphones", stock: 8, featured: true },
+            { id: 5, name: "iPhone 14 Pro", category: "Phones", brand: "Apple", price: 145000, description: "The latest and greatest from Apple.", specs: '{"Storage": "256GB", "Color": "Deep Purple"}', imageUrls: "https://placehold.co/600x600/007bff/ffffff?text=iPhone", stock: 5, featured: false },
+            { id: 6, name: "Galaxy S23 Ultra", category: "Phones", brand: "Samsung", price: 130000, description: "The pinnacle of Android smartphones.", specs: '{"Storage": "256GB", "Color": "Phantom Black"}', imageUrls: "https://placehold.co/600x600/e2e8f0/1a202c?text=Galaxy", stock: 7, featured: false },
+            { id: 7, name: "Spigen Glass Protector", category: "Screen Protectors", brand: "Spigen", price: 1500, description: "Tempered glass for ultimate screen protection.", specs: '{"Compatibility": "iPhone 14 Series", "Hardness": "9H"}', imageUrls: "https://placehold.co/600x600/1a202c/ffffff?text=Protector", stock: 30, featured: false },
+            { id: 8, name: "Oraimo Watch ER OSW-42", category: "Smartwatches", brand: "Oraimo", price: 8500, description: "Affordable smartwatch with great features.", specs: '{"Display": "1.4-inch TFT", "GPS": "Yes"}', imageUrls: "https://placehold.co/600x600/007bff/ffffff?text=Watch", stock: 12, featured: true },
+        ],
+        testimonials: [
+            { name: "Lumumba.", quote: "Amazing products and super fast delivery in Nairobi. The BAS team is the best!", rating: 5 },
+            { name: "Eugooo.", quote: "I love the aesthetic of my new phone case. It's exactly what I was looking for. Quality stuff!", rating: 5 },
+            { name: "Hailey.", quote: "Finally, a reliable online tech shop in Kenya. Great prices and genuine products. Highly recommend.", rating: 4 },
+        ],
+        blogPosts: [
+            { id: 1, title: "How to Choose the Right Charger", content: "Confused by watts, volts, and amps? This guide breaks it all down to help you pick the perfect charger for your device...", date: "2025-07-28" },
+            { id: 2, title: "Top 5 Must-Have Phone Accessories", content: "Elevate your smartphone experience with these essential accessories, from power banks to premium earbuds...", date: "2025-07-28" },
+            { id: 3, title: "Why a Good Screen Protector is a Must", content: "Think you don't need a screen protector? Think again. We explore why this small investment can save you thousands...", date: "2025-07-28" },
+        ]
+    };
+    
+    // --- APPLICATION STATE ---
+    const state = {
+        products: [],
+        testimonials: [],
+        blogPosts: [],
+        cart: [], // { id, name, price, quantity, imageUrl }
+        wishlist: [],
+        currentPage: 'home',
+        isLoggedIn: false,
+    };
+
+    // --- DOM ELEMENTS ---
+    const pages = {
+        home: document.getElementById('home-page'),
+        shop: document.getElementById('shop-page'),
+        product: document.getElementById('product-page'),
+        about: document.getElementById('about-page'),
+        contact: document.getElementById('contact-page'),
+        blog: document.getElementById('blog-page'),
+        dashboard: document.getElementById('dashboard-page'),
+    };
+    const cartModal = document.getElementById('cart-modal');
+    const cartPanel = document.getElementById('cart-panel');
+    const checkoutModal = document.getElementById('checkout-modal');
+
+    // --- UTILITY FUNCTIONS ---
+    const formatCurrency = (amount) => `Ksh ${new Intl.NumberFormat('en-KE').format(amount)}`;
+
+    const showToast = (message) => {
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toast-message');
+        toastMessage.textContent = message;
+        toast.classList.remove('translate-x-[120%]');
+        setTimeout(() => {
+            toast.classList.add('translate-x-[120%]');
+        }, 3000);
+    };
+    
+    // --- NAVIGATION ---
+    const showPage = (pageId) => {
+        if (!pages[pageId]) return;
+        Object.values(pages).forEach(page => page.classList.add('hidden'));
+        pages[pageId].classList.remove('hidden');
+        state.currentPage = pageId;
+        window.scrollTo(0, 0);
+    };
+
+    // --- DATA FETCHING ---
+    const fetchData = async (endpoint) => {
+        if (googleScriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+            console.warn("Google Apps Script URL not set. Using mock data.");
+            return mockData[endpoint] || [];
+        }
+        try {
+            const response = await fetch(`${googleScriptURL}?endpoint=${endpoint}`);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const data = await response.json();
+            // The Apps Script returns { data: [...] }.
+            return data.data;
+        } catch (error) {
+            console.error(`Failed to fetch ${endpoint}:`, error);
+            showToast(`Error fetching data. Using fallback.`);
+            return mockData[endpoint] || [];
+        }
+    };
+    
+    const postData = async (endpoint, payload) => {
+        if (googleScriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+            console.warn("Google Apps Script URL not set. Simulating POST request.");
+            return { success: true, message: "Simulated success" };
+        }
+        try {
+            const response = await fetch(googleScriptURL, {
+                method: 'POST',
+                mode: 'no-cors', // Required for simple POST to Apps Script
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ endpoint, payload }),
+            });
+            // no-cors means we can't read the response, so we optimistically assume success
+            return { success: true };
+        } catch (error) {
+            console.error(`Failed to post to ${endpoint}:`, error);
+            showToast(`Error submitting data.`);
+            return { success: false, error };
+        }
+    };
+
+    // --- RENDER FUNCTIONS ---
+    const renderFeaturedProducts = () => {
+        const container = document.getElementById('featured-products');
+        const featured = state.products.filter(p => p.featured).slice(0, 4);
+        container.innerHTML = featured.map(product => `
+            <div class="bg-white rounded-lg shadow-md overflow-hidden group transition-transform transform hover:-translate-y-1">
+                <div class="relative">
+                    <img src="${product.imageUrls.split(',')[0]}" alt="${product.name}" class="w-full h-56 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <button class="view-product-btn text-white bg-electric-blue py-2 px-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" data-id="${product.id}">Quick View</button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg truncate">${product.name}</h3>
+                    <p class="text-gray-500 text-sm">${product.category}</p>
+                    <div class="flex justify-between items-center mt-3">
+                        <p class="font-bold text-electric-blue text-lg">${formatCurrency(product.price)}</p>
+                        <button class="add-to-cart-btn bg-gray-200 hover:bg-electric-blue hover:text-white rounded-full p-2 transition" data-id="${product.id}">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    };
+    
+    const renderTestimonials = () => {
+        const container = document.getElementById('testimonials');
+        container.innerHTML = state.testimonials.map(t => `
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <p class="text-gray-600 mb-4">"${t.quote}"</p>
+                <div class="flex items-center">
+                    <div class="font-bold text-gray-900">${t.name}</div>
+                    <div class="ml-auto flex">
+                        ${'★'.repeat(t.rating)}${'☆'.repeat(5 - t.rating)}
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    };
+    
+    const renderHomeCategories = () => {
+        const container = document.getElementById('home-categories');
+        const categories = [...new Set(state.products.map(p => p.category))];
+        const icons = {
+            "Phones": "M10 2a2 2 0 00-2 2v16a2 2 0 002 2h4a2 2 0 002-2V4a2 2 0 00-2-2h-4z",
+            "Screen Protectors": "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+            "Phone Cases": "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z",
+            "Chargers & Cables": "M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z M13 21.945A9.001 9.001 0 0013 3v1h8.945a9.004 9.004 0 00-8.945 17.945V21z",
+            "Power Banks": "M18 10a8 8 0 11-16 0 8 8 0 0116 0z M7 10a1 1 0 100-2 1 1 0 000 2z",
+            "Headphones & Earbuds": "M3.055 11H11v8.945A9.001 9.001 0 003.055 11zm0 2H11v-2H3.055a9.004 9.004 0 000 2z",
+            "Smartwatches": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+        };
+        container.innerHTML = categories.map(cat => `
+            <a href="#" class="category-link bg-white p-4 rounded-lg shadow-sm flex flex-col items-center justify-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300" data-category="${cat}">
+                <svg class="w-10 h-10 mb-2 text-electric-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="${icons[cat] || 'M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4'}"></path></svg>
+                <span class="font-semibold text-sm">${cat}</span>
+            </a>
+        `).join('');
+    };
+
+    const renderShopProducts = (filters = {}) => {
+        const container = document.getElementById('shop-products-grid');
+        let filteredProducts = [...state.products];
+
+        if (filters.category) {
+            filteredProducts = filteredProducts.filter(p => p.category === filters.category);
+        }
+        if (filters.brand) {
+            filteredProducts = filteredProducts.filter(p => p.brand === filters.brand);
+        }
+        if (filters.maxPrice) {
+            filteredProducts = filteredProducts.filter(p => p.price <= filters.maxPrice);
+        }
+
+        if (filteredProducts.length === 0) {
+            container.innerHTML = `<p class="col-span-full text-center text-gray-500">No products match your filters.</p>`;
+            return;
+        }
+
+        container.innerHTML = filteredProducts.map(product => `
+            <div class="bg-white rounded-lg shadow-md overflow-hidden group transition-transform transform hover:-translate-y-1">
+                <div class="relative">
+                    <img src="${product.imageUrls.split(',')[0]}" alt="${product.name}" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <button class="view-product-btn text-white bg-electric-blue py-2 px-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" data-id="${product.id}">View Details</button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg truncate">${product.name}</h3>
+                    <p class="text-gray-500 text-sm">${product.brand}</p>
+                    <div class="flex justify-between items-center mt-3">
+                        <p class="font-bold text-electric-blue text-lg">${formatCurrency(product.price)}</p>
+                        <button class="add-to-cart-btn bg-gray-200 hover:bg-electric-blue hover:text-white rounded-full p-2 transition" data-id="${product.id}">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    };
+    
+    const renderShopFilters = () => {
+        const categories = [...new Set(state.products.map(p => p.category))];
+        const brands = [...new Set(state.products.map(p => p.brand))];
+        
+        const categoryContainer = document.getElementById('filter-category');
+        categoryContainer.innerHTML = categories.map(cat => `
+            <label class="flex items-center">
+                <input type="radio" name="category-filter" value="${cat}" class="h-4 w-4 text-electric-blue border-gray-300 focus:ring-electric-blue">
+                <span class="ml-2 text-sm text-gray-700">${cat}</span>
+            </label>
+        `).join('');
+
+        const brandContainer = document.getElementById('filter-brand');
+        brandContainer.innerHTML = brands.map(brand => `
+            <label class="flex items-center">
+                <input type="checkbox" value="${brand}" class="filter-brand-checkbox h-4 w-4 text-electric-blue border-gray-300 rounded focus:ring-electric-blue">
+                <span class="ml-2 text-sm text-gray-700">${brand}</span>
+            </label>
+        `).join('');
+    };
+    
+    const renderProductPage = (productId) => {
+        const product = state.products.find(p => p.id == productId);
+        if (!product) {
+            pages.product.innerHTML = `<p class="text-center py-20">Product not found.</p>`;
+            showPage('product');
+            return;
+        }
+        
+        let specs = {};
+        try {
+            specs = JSON.parse(product.specs);
+        } catch(e) { console.error("Invalid specs JSON:", product.specs); }
+
+        pages.product.innerHTML = `
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <img src="${product.imageUrls.split(',')[0]}" alt="${product.name}" class="w-full rounded-lg shadow-lg">
+                        <!-- Add gallery for multiple images if available -->
+                    </div>
+                    <div>
+                        <h1 class="text-4xl font-bold mb-2">${product.name}</h1>
+                        <p class="text-lg text-gray-500 mb-4">${product.category}</p>
+                        <p class="text-4xl font-bold text-electric-blue mb-6">${formatCurrency(product.price)}</p>
+                        <p class="text-gray-700 mb-6">${product.description}</p>
+                        
+                        <div class="mb-6">
+                            <h3 class="font-bold text-lg mb-2">Key Specs</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                ${Object.entries(specs).map(([key, value]) => `<li><strong>${key}:</strong> ${value}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <button class="add-to-cart-btn flex-1 bg-electric-blue text-white py-3 rounded-lg hover:bg-blue-600 transition" data-id="${product.id}">Add to Cart</button>
+                            <button class="add-to-wishlist-btn border border-gray-300 rounded-lg p-3 hover:bg-gray-100 hover:border-red-500 hover:text-red-500 transition" data-id="${product.id}">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"></path></svg>
+                            </button>
+                        </div>
+
+                        <div class="mt-8 border-t pt-6">
+                            <h3 class="font-bold text-lg mb-2">Shipping & Returns</h3>
+                            <p class="text-sm text-gray-600">Same-day/next-day delivery in Nairobi. 2-3 days for other regions. 7-day return policy for defective items.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        showPage('product');
+    };
+    
+    const renderBlogPosts = () => {
+        const container = document.getElementById('blog-posts-container');
+        container.innerHTML = state.blogPosts.map(post => `
+             <div class="bg-white rounded-lg shadow-md overflow-hidden group transition-transform transform hover:-translate-y-1">
+                <div class="p-6">
+                    <p class="text-sm text-gray-500 mb-2">${post.date}</p>
+                    <h3 class="font-bold text-xl mb-3">${post.title}</h3>
+                    <p class="text-gray-600 mb-4">${post.content}</p>
+                    <a href="#" class="font-semibold text-electric-blue hover:underline">Read More &rarr;</a>
+                </div>
+            </div>
+        `).join('');
+    };
+
+    // --- CART LOGIC ---
+    const updateCart = () => {
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartCount = document.getElementById('cart-count');
+        const cartSubtotal = document.getElementById('cart-subtotal');
+        const checkoutButton = document.getElementById('checkout-button');
+
+        cartCount.textContent = state.cart.reduce((sum, item) => sum + item.quantity, 0);
+
+        if (state.cart.length === 0) {
+            cartItemsContainer.innerHTML = `<p class="text-center text-gray-500 py-8">Your cart is empty.</p>`;
+            checkoutButton.disabled = true;
+        } else {
+            cartItemsContainer.innerHTML = state.cart.map(item => `
+                <div class="flex items-center justify-between py-3 border-b">
+                    <div class="flex items-center">
+                        <img src="${item.imageUrl}" alt="${item.name}" class="w-16 h-16 object-cover rounded-md mr-4">
+                        <div>
+                            <p class="font-semibold">${item.name}</p>
+                            <p class="text-sm text-gray-500">${formatCurrency(item.price)}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="number" value="${item.quantity}" min="1" class="w-12 text-center border rounded-md mx-2 quantity-input" data-id="${item.id}">
+                        <button class="remove-from-cart-btn text-red-500 hover:text-red-700" data-id="${item.id}">&times;</button>
+                    </div>
+                </div>
+            `).join('');
+            checkoutButton.disabled = false;
+        }
+        
+        const subtotal = state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        cartSubtotal.textContent = formatCurrency(subtotal);
+    };
+
+    const addToCart = (productId) => {
+        const product = state.products.find(p => p.id == productId);
+        if (!product) return;
+
+        const existingItem = state.cart.find(item => item.id == productId);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            state.cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                quantity: 1,
+                imageUrl: product.imageUrls.split(',')[0]
+            });
+        }
+        updateCart();
+        showToast(`${product.name} added to cart!`);
+    };
+
+    const removeFromCart = (productId) => {
+        state.cart = state.cart.filter(item => item.id != productId);
+        updateCart();
+        showToast(`Item removed from cart.`);
+    };
+
+    const updateCartQuantity = (productId, quantity) => {
+        const item = state.cart.find(item => item.id == productId);
+        if (item) {
+            item.quantity = parseInt(quantity, 10);
+            if (item.quantity < 1) {
+                removeFromCart(productId);
+            } else {
+                updateCart();
+            }
+        }
+    };
+    
+    const toggleCartModal = (show) => {
+        if (show) {
+            cartModal.classList.remove('hidden');
+            setTimeout(() => cartPanel.classList.remove('translate-x-full'), 10);
+        } else {
+            cartPanel.classList.add('translate-x-full');
+            setTimeout(() => cartModal.classList.add('hidden'), 300);
+        }
+    };
+    
+    // --- WISHLIST LOGIC ---
+    const addToWishlist = (productId) => {
+        const product = state.products.find(p => p.id == productId);
+        if (!product) return;
+        
+        if (!state.wishlist.find(item => item.id == productId)) {
+            state.wishlist.push(product);
+            showToast(`${product.name} added to wishlist!`);
+            renderWishlist();
+        } else {
+            showToast(`${product.name} is already in your wishlist.`);
+        }
+    };
+    
+    const renderWishlist = () => {
+        const container = document.getElementById('wishlist-items');
+        if (state.wishlist.length === 0) {
+            container.innerHTML = `<p class="text-gray-500">Your wishlist is empty.</p>`;
+        } else {
+            container.innerHTML = state.wishlist.map(item => `
+                <div class="flex items-center justify-between py-2 border-b">
+                    <p>${item.name}</p>
+                    <button class="view-product-btn text-sm text-electric-blue hover:underline" data-id="${item.id}">View</button>
+                </div>
+            `).join('');
+        }
+    };
+
+    // --- CHECKOUT & ORDER LOGIC ---
+    const handleCheckout = () => {
+        toggleCartModal(false);
+        checkoutModal.classList.remove('hidden');
+        document.getElementById('checkout-form').classList.remove('hidden');
+        document.getElementById('order-confirmation').classList.add('hidden');
+    };
+    
+    const handleConfirmOrder = async () => {
+        const orderPayload = {
+            customerName: "Test User", // In real app, get from form
+            customerEmail: "test@example.com",
+            items: state.cart,
+            total: state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+            paymentMethod: document.querySelector('input[name="payment"]:checked').value,
+            status: "Pending",
+            timestamp: new Date().toISOString()
+        };
+        
+        // Post to Google Sheet
+        const result = await postData('orders', orderPayload);
+        
+        // Show confirmation
+        document.getElementById('checkout-form').classList.add('hidden');
+        document.getElementById('order-confirmation').classList.remove('hidden');
+        
+        // Clear cart
+        state.cart = [];
+        updateCart();
+    };
+
+    // --- DASHBOARD LOGIC ---
+    const updateDashboardView = () => {
+        if (state.isLoggedIn) {
+            document.getElementById('login-view').classList.add('hidden');
+            document.getElementById('dashboard-view').classList.remove('hidden');
+            renderWishlist();
+            // In a real app, you would fetch and render order history here.
+        } else {
+            document.getElementById('login-view').classList.remove('hidden');
+            document.getElementById('dashboard-view').classList.add('hidden');
+        }
+    };
+
+    // --- EVENT LISTENERS ---
+    document.addEventListener('DOMContentLoaded', async () => {
+        // Fetch all data on initial load
+        const [products, testimonials, blogPosts] = await Promise.all([
+            fetchData('products'),
+            fetchData('testimonials'),
+            fetchData('blogPosts')
+        ]);
+        
+        state.products = products;
+        state.testimonials = testimonials;
+        state.blogPosts = blogPosts;
+
+        // Render initial page content
+        renderFeaturedProducts();
+        renderTestimonials();
+        renderHomeCategories();
+        renderShopProducts();
+        renderShopFilters();
+        renderBlogPosts();
+        updateDashboardView();
+    });
+
+    document.addEventListener('click', (e) => {
+        // Navigation
+        if (e.target.closest('.nav-link')) {
+            e.preventDefault();
+            const pageId = e.target.closest('.nav-link').dataset.page;
+            showPage(pageId);
+            // Close mobile menu if open
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+        
+        // View Product
+        if (e.target.closest('.view-product-btn')) {
+            const productId = e.target.closest('.view-product-btn').dataset.id;
+            renderProductPage(productId);
+        }
+        
+        // Category link from home
+        if (e.target.closest('.category-link')) {
+            e.preventDefault();
+            const category = e.target.closest('.category-link').dataset.category;
+            document.querySelector(`input[name="category-filter"][value="${category}"]`).checked = true;
+            renderShopProducts({ category });
+            showPage('shop');
+        }
+
+        // Add to Cart
+        if (e.target.closest('.add-to-cart-btn')) {
+            const productId = e.target.closest('.add-to-cart-btn').dataset.id;
+            addToCart(productId);
+        }
+        
+        // Add to Wishlist
+        if (e.target.closest('.add-to-wishlist-btn')) {
+            const productId = e.target.closest('.add-to-wishlist-btn').dataset.id;
+            addToWishlist(productId);
+        }
+
+        // Cart actions
+        if (e.target.id === 'cart-button') toggleCartModal(true);
+        if (e.target.id === 'close-cart-button' || e.target.closest('#close-cart-button')) toggleCartModal(false);
+        if (e.target.closest('.remove-from-cart-btn')) {
+            const productId = e.target.closest('.remove-from-cart-btn').dataset.id;
+            removeFromCart(productId);
+        }
+        
+        // Checkout actions
+        if (e.target.id === 'checkout-button') handleCheckout();
+        if (e.target.id === 'close-checkout-button') checkoutModal.classList.add('hidden');
+        if (e.target.id === 'confirm-order-button') handleConfirmOrder();
+        if (e.target.id === 'close-confirmation-button') checkoutModal.classList.add('hidden');
+        
+        // Mobile Menu
+        if (e.target.closest('#mobile-menu-button')) {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+        
+        // Dashboard
+        if (e.target.id === 'login-button') {
+            state.isLoggedIn = true;
+            updateDashboardView();
+            showToast("Logged in successfully (simulated).");
+        }
+        if (e.target.id === 'logout-button') {
+            state.isLoggedIn = false;
+            updateDashboardView();
+            showToast("Logged out.");
+        }
+    });
+    
+    // Input event listeners
+    document.addEventListener('input', (e) => {
+        // Cart quantity
+        if (e.target.classList.contains('quantity-input')) {
+            const productId = e.target.dataset.id;
+            const quantity = e.target.value;
+            updateCartQuantity(productId, quantity);
+        }
+        // Price filter
+        if (e.target.id === 'filter-price') {
+            document.getElementById('price-filter-value').textContent = formatCurrency(e.target.value);
+        }
+    });
+    
+    // Filter buttons
+    document.getElementById('apply-filters').addEventListener('click', () => {
+        const category = document.querySelector('input[name="category-filter"]:checked')?.value;
+        const brand = [...document.querySelectorAll('.filter-brand-checkbox:checked')].map(cb => cb.value)[0]; // Simplified to single brand for now
+        const maxPrice = document.getElementById('filter-price').value;
+        
+        renderShopProducts({ category, brand, maxPrice });
+    });
+
+    document.getElementById('reset-filters').addEventListener('click', () => {
+        document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(i => i.checked = false);
+        document.getElementById('filter-price').value = 150000;
+        document.getElementById('price-filter-value').textContent = formatCurrency(150000);
+        renderShopProducts();
+    });
+    
+    // Contact Form submission
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const payload = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: formData.get('message'),
+            timestamp: new Date().toISOString()
+        };
+        
+        const result = await postData('contacts', payload);
+        showToast("Message sent! We'll get back to you soon.");
+        form.reset();
+    });
+
+    </script>
+</body>
+</html>

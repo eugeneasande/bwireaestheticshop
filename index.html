@@ -53,9 +53,37 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+        
+        /* --- Prototype Banner CSS (No JS) --- */
+        @keyframes slideOut {
+            0%, 95% { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% { 
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        #prototype-banner {
+            animation: slideOut 26s ease-in-out forwards; /* 25s visible, 1s to slide out */
+        }
+        /* Hide banner when the close button (label for the checkbox) is clicked */
+        #hide-banner-checkbox:checked + #prototype-banner {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
+
+    <!-- Prototype Banner (No JS) -->
+    <input type="checkbox" id="hide-banner-checkbox" class="hidden">
+    <div id="prototype-banner" class="relative bg-electric-blue text-white text-center p-3 flex justify-center items-center">
+        <p class="text-sm">This is a prototype. Some features may not work as expected.</p>
+        <label for="hide-banner-checkbox" class="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-2xl font-light hover:text-gray-200" title="Close">&times;</label>
+    </div>
+
 
     <!-- App Container -->
     <div id="app" class="min-h-screen flex flex-col">
@@ -341,15 +369,8 @@
                     </div>
                 </div>
                 <div class="border-t border-gray-800 mt-8 py-6 text-center text-gray-500">
-  <p>&copy; <span id="year"></span> Bwire Aesthetic Shop. All Rights Reserved. Prototype by 
-    <a href="https://www.instagram.com/eugz_asax/" target="_blank" class="text-blue-400 hover:underline">@eugz_asax</a>.
-  </p>
-</div>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+                    <p>&copy; <span id="current-year"></span> Bwire Aesthetic Shop. All Rights Reserved. Prototype by <a href="https://www.instagram.com/eugz_asax/" target="_blank" class="underline hover:text-white">eugz_asax</a>.</p>
+                </div>
             </div>
         </footer>
 
@@ -431,9 +452,9 @@
     // 3. Go to Extensions > Apps Script and paste the script provided in the conclusion.
     // 4. Deploy the script as a Web App (with "Anyone" access).
     // 5. Paste the Web App URL here.
-    const googleScriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'; // <-- PASTE YOUR URL HERE
+    const googleScriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'; // <-- PASTE URL 
 
-    // --- MOCK DATA (Used if Google Script fails or is not set up) ---
+    // --- MOCK DATA (---
     const mockData = {
         products: [
             { id: 1, name: "iPhone 14 Pro Case", category: "Phone Cases", brand: "Apple", price: 2500, description: "Sleek and protective case for iPhone 14 Pro.", specs: '{"Material": "Silicone", "Color": "Midnight Black"}', imageUrls: "https://placehold.co/600x600/1a202c/ffffff?text=Case", stock: 15, featured: true },
@@ -443,17 +464,17 @@
             { id: 5, name: "iPhone 14 Pro", category: "Phones", brand: "Apple", price: 145000, description: "The latest and greatest from Apple.", specs: '{"Storage": "256GB", "Color": "Deep Purple"}', imageUrls: "https://placehold.co/600x600/007bff/ffffff?text=iPhone", stock: 5, featured: false },
             { id: 6, name: "Galaxy S23 Ultra", category: "Phones", brand: "Samsung", price: 130000, description: "The pinnacle of Android smartphones.", specs: '{"Storage": "256GB", "Color": "Phantom Black"}', imageUrls: "https://placehold.co/600x600/e2e8f0/1a202c?text=Galaxy", stock: 7, featured: false },
             { id: 7, name: "Spigen Glass Protector", category: "Screen Protectors", brand: "Spigen", price: 1500, description: "Tempered glass for ultimate screen protection.", specs: '{"Compatibility": "iPhone 14 Series", "Hardness": "9H"}', imageUrls: "https://placehold.co/600x600/1a202c/ffffff?text=Protector", stock: 30, featured: false },
-            { id: 8, name: "Oraimo Watch ER OSW-42", category: "Smartwatches", brand: "Oraimo", price: 8500, description: "Affordable smartwatch with great features.", specs: '{"Display": "1.4-inch TFT", "GPS": "Yes"}', imageUrls: "https://placehold.co/600x600/007bff/ffffff?text=Watch", stock: 12, featured: true },
+            { id: 8, name: "Oraimo Watch ER OSW-42", category: "Smartwatches", brand: "Oraimo", price: 8500, description: "Stylish and functional smartwatch with a vibrant display.", specs: '{"Display": "1.43-inch AMOLED", "OS": "Oraimo OS"}', imageUrls: "https://placehold.co/600x600/007bff/ffffff?text=OraimoWatch", stock: 12, featured: true },
         ],
         testimonials: [
-            { name: "Lumumba.", quote: "Amazing products and super fast delivery in Nairobi. The BAS team is the best!", rating: 5 },
-            { name: "Eugooo.", quote: "I love the aesthetic of my new phone case. It's exactly what I was looking for. Quality stuff!", rating: 5 },
-            { name: "Hailey.", quote: "Finally, a reliable online tech shop in Kenya. Great prices and genuine products. Highly recommend.", rating: 4 },
+            { name: "Lumumba", quote: "Amazing products and super fast delivery in Nairobi. The BAS team is the best!", rating: 5 },
+            { name: "Eugoooo", quote: "I love the aesthetic of my new phone case. It's exactly what I was looking for. Quality stuff!", rating: 5 },
+            { name: "Hailey", quote: "Finally, a reliable online tech shop in Kenya. Great prices and genuine products. Highly recommend.", rating: 4 },
         ],
         blogPosts: [
-            { id: 1, title: "How to Choose the Right Charger", content: "Confused by watts, volts, and amps? This guide breaks it all down to help you pick the perfect charger for your device...", date: "2025-07-28" },
-            { id: 2, title: "Top 5 Must-Have Phone Accessories", content: "Elevate your smartphone experience with these essential accessories, from power banks to premium earbuds...", date: "2025-07-28" },
-            { id: 3, title: "Why a Good Screen Protector is a Must", content: "Think you don't need a screen protector? Think again. We explore why this small investment can save you thousands...", date: "2025-07-28" },
+            { id: 1, title: "How to Choose the Right Charger", content: "Confused by watts, volts, and amps? This guide breaks it all down to help you pick the perfect charger for your device...", date: "2024-07-20" },
+            { id: 2, title: "Top 5 Must-Have Phone Accessories", content: "Elevate your smartphone experience with these essential accessories, from power banks to premium earbuds...", date: "2024-07-15" },
+            { id: 3, title: "Why a Good Screen Protector is a Must", content: "Think you don't need a screen protector? Think again. We explore why this small investment can save you thousands...", date: "2024-07-10" },
         ]
     };
     
@@ -891,6 +912,9 @@
 
     // --- EVENT LISTENERS ---
     document.addEventListener('DOMContentLoaded', async () => {
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
         // Fetch all data on initial load
         const [products, testimonials, blogPosts] = await Promise.all([
             fetchData('products'),

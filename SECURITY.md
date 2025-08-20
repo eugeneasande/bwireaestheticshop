@@ -17,7 +17,7 @@ If you're using an unsupported version, please update to the latest release to s
 If you discover a security issue in this project, please **do not open a public issue**.  
 Instead, report it responsibly by following these steps:  
 
-1. Email: [eugeneasande@icloud.com] *(replace with your contact email or security team email)*  
+1. Email: [eugeneasande@icloud.com]   
 2. Provide as much detail as possible (steps to reproduce, screenshots, logs, etc).  
 3. We will acknowledge your report within **24 hours**.  
 4. If the issue is valid, we’ll work on a fix and keep you updated.  

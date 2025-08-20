@@ -743,15 +743,15 @@
 
     <script>
     // --- FIREBASE CONFIGURATION ---
-    const firebaseConfig = {
-      apiKey: "AIzaSyDPp_ks97xu4DDWmz9VGEX6tsqUtKuw8xU",
-      authDomain: "bwire-lum.firebaseapp.com",
-      projectId: "bwire-lum",
-      storageBucket: "bwire-lum.appspot.com",
-      messagingSenderId: "1045615624259",
-      appId: "1:1045615624259:web:ff0311b3120b4cebedd4f6",
-      measurementId: "G-V22Y4WY1BF"
-    };
+   const firebaseConfig = {
+  apiKey: "your-api-key",
+  authDomain: "your-project-id.firebaseapp.com",
+  projectId: "your-project-id",
+  storageBucket: "your-project-id.appspot.com",
+  messagingSenderId: "your-messaging-sender-id",
+  appId: "your-app-id",
+  measurementId: "your-measurement-id"
+};
 
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
@@ -768,11 +768,11 @@
         cart: [],
         wishlist: [],
         currentPage: 'home',
-        currentUser: null, // This will hold the Firebase auth user object
-        currentUserData: null, // This will hold user data from our 'users' collection
+        currentUser: null, 
+        currentUserData: null, 
         orders: [],
         notifications: [],
-        communityPostListener: null, // To hold the unsubscribe function for the listener
+        communityPostListener: null, 
     };
 
     // --- DOM ELEMENTS ---

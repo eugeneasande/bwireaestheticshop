@@ -9,17 +9,17 @@ It delivers a **seamless shopping experience** with a clean, aesthetic UI and ro
 ## ✨ Features
 This project comes packed with everything to build a **complete e-commerce ecosystem**:
 
-- 🏠 **Homepage**: Hero section, featured products, and testimonials.  
-- 🛍️ **Shop Page**: Advanced product listings with filtering by category, brand, and price.  
-- 👤 **Customer Accounts**: Login, Sign Up, and Password Reset for personalized experiences.  
-- 🛒 **Shopping Cart**: Add, remove, and update product quantities.  
-- ❤️ **Wishlist**: Save favorite items.  
-- 📝 **Blog**: Tech tips, reviews, and articles.  
-- 💬 **Community Hub**: Interactive forum with posts, comments, replies, likes, mentions, hashtags, and trending topics.  
-- 🔔 **Notifications**: Real-time alerts for mentions and interactions.  
-- 🔑 **User Dashboard**: Profile, order history, and wishlist management.  
-- 💳 **Checkout System**: Simulated checkout with M-PESA and Cash on Delivery options.  
-- 📱 **Fully Responsive**: Works beautifully on all devices.
+- 🏠 **Homepage**: Hero section, featured products, and testimonials  
+- 🛍️ **Shop Page**: Advanced product listings with filtering by category, brand, and price  
+- 👤 **Customer Accounts**: Login, Sign Up, and Password Reset for personalized experiences  
+- 🛒 **Shopping Cart**: Add, remove, and update product quantities  
+- ❤️ **Wishlist**: Save favorite items  
+- 📝 **Blog**: Tech tips, reviews, and articles  
+- 💬 **Community Hub**: Interactive forum with posts, comments, replies, likes, mentions, hashtags, and trending topics  
+- 🔔 **Notifications**: Real-time alerts for mentions and interactions  
+- 🔑 **User Dashboard**: Profile, order history, and wishlist management  
+- 💳 **Checkout System**: Simulated checkout with M-PESA and Cash on Delivery options  
+- 📱 **Fully Responsive**: Works beautifully on all devices
 
 ---
 
@@ -39,6 +39,8 @@ This project comes packed with everything to build a **complete e-commerce ecosy
 No special tools needed. A modern web browser is enough.  
 For development, a code editor like **VS Code** is recommended.
 
+---
+
 # 🤝 Contributing
 
 Contributions make the open-source community amazing!  
@@ -48,13 +50,5 @@ Contributions make the open-source community amazing!
 2. **Create your feature branch:**  
 ```bash
 git checkout -b feature/AmazingFeature
-3. Commit your changes:
-```bash
 git commit -m "Add some AmazingFeature"
-4. Push to the branch:
-```bash
 git push origin feature/AmazingFeature
-
-
-
-

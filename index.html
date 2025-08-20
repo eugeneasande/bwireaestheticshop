@@ -1,10 +1,71 @@
+<!--
+  ███████╗███████╗███╗   ███╗ ██████╗ ███████╗
+  ██╔════╝██╔════╝████╗ ████║██╔═══██╗██╔════╝
+  █████╗  █████╗  ██╔████╔██║██║   ██║█████╗  
+  ██╔══╝  ██╔══╝  ██║╚██╔╝██║██║   ██║██╔══╝  
+  ███████╗███████╗██║ ╚═╝ ██║╚██████╔╝███████╗
+  ╚══════╝╚══════╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝
+
+  Project       : Bwire Aesthetics
+  Version       : 8.2.1
+  Last Edit     : 2025-08-20 03:56am
+  Author        : eugz_asax
+  Signature Vibe: Hacker chic / Big-boy style
+
+  ────────────────────────────────
+  ⚠ WARNING ⚠
+  Unauthorized eyes may trigger a trace
+  Tampering with code may result in instant firewall breach
+  Reading further will invoke Hacker Aura effects
+
+  [SYSTEM STATUS - CORE]
+  • Kernel Override     : ACTIVE
+  • Phantom Mode       : ENABLED
+  • Obfuscation Level  : HIGH
+  • Magic Bytes Detected: ✔
+  • CPU                : 1337Hz OVERCLOCKED
+  • Memory             : INFINITE
+  • Network            : SECURE TUNNEL
+  • Hacker Aura        : 100%
+  • Last Compilation   : 2025-08-20 03:56am
+
+  [ASCII CIRCUIT]
+     ╔══╗ ╔══╗ ╔══╗ ╔══╗ ╔══╗
+     ║░░║ ║░░║ ║░░║ ║░░║ ║░░║
+     ║░░║ ║░░║ ║░░║ ║░░║ ║░░║
+     ╚══╝ ╚══╝ ╚══╝ ╚══╝ ╚══╝
+
+  [ASCII LOCKS]
+     🔒 🔒 🔒 🔒 🔒 🔒 🔒
+     🔑 KEY: eugz_asax
+
+  [ASAX DEBUG LOGS]
+  > init_hacker_routine();
+  > bypass_security_layer();
+  > inject_magic_bytes();
+  > verify_hacker_aura();
+  > system_status_check: OK
+  > deploy_eugz_signature();
+
+  [LEGEND]
+  Only coders with courage dare read this far.
+  This signature marks the presence of eugz_asax,
+  Master of code, Wizard of the Web.
+  
+  Keep it secret. Keep it slick. Only inspect if you dare.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bwire Aesthetic Shop</title>
-    ta
+
+    <!-- Favicon setup -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -13,77 +74,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+
+    <!-- Flatpickr for Date Picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Tone.js for sound -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+
     <!-- Custom Styles & Configuration -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8fafc; /* A very light grey for contrast */
         }
-        /* Custom Electric Blue color */
         .bg-electric-blue { background-color: #007BFF; }
         .text-electric-blue { color: #007BFF; }
         .border-electric-blue { border-color: #007BFF; }
         .ring-electric-blue { --tw-ring-color: #007BFF; }
-
-        /* Smooth scrolling for anchor links */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Simple animation for page transitions */
-        .page {
-            animation: fadeIn 0.5s ease-in-out;
-        }
+        html { scroll-behavior: smooth; }
+        .page { animation: fadeIn 0.5s ease-in-out; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        /* Custom scrollbar for a cleaner look */
-        ::-webkit-scrollbar {
-            width: 8px;
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+        /* Wishlist active state */
+        .wishlist-active, .like-active {
+            background-color: #fce7f3; /* pink-100 */
+            color: #db2777; /* pink-600 */
+            border-color: #db2777; /* pink-600 */
         }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
+        .like-button.liked svg, .comment-like-btn.liked svg {
+            fill: #ef4444; /* red-500 */
+            color: #ef4444;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
+        /* Notification Badge */
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -8px;
+            height: 18px;
+            width: 18px;
+            font-size: 10px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-        
-        /* --- Prototype Banner CSS (No JS) --- */
-        @keyframes slideOut {
-            0%, 95% { 
-                transform: translateY(0);
-                opacity: 1;
-            }
-            100% { 
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-            }
-        }
-        #prototype-banner {
-            animation: slideOut 26s ease-in-out forwards; /* 25s visible, 1s to slide out */
-        }
-        /* Hide banner when the close button (label for the checkbox) is clicked */
-        #hide-banner-checkbox:checked + #prototype-banner {
-            display: none;
+        /* FIX: Ensure date picker is visible on mobile */
+        .flatpickr-calendar {
+            z-index: 1050 !important;
         }
     </style>
 </head>
-<body class="bg-white text-gray-800">
-
-    <!-- Prototype Banner (No JS) -->
-    <input type="checkbox" id="hide-banner-checkbox" class="hidden">
-    <div id="prototype-banner" class="relative bg-electric-blue text-white text-center p-3 flex justify-center items-center">
-        <p class="text-sm">This is a prototype. Some features may not work as expected.</p>
-        <label for="hide-banner-checkbox" class="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-2xl font-light hover:text-gray-200" title="Close">&times;</label>
-    </div>
-
+<body class="bg-gray-50 text-gray-800">
 
     <!-- App Container -->
     <div id="app" class="min-h-screen flex flex-col">
@@ -94,14 +142,10 @@
                 <div class="flex items-center justify-between h-20">
                     <!-- Logo -->
                     <a href="#" class="flex items-center space-x-2 nav-link" data-page="home">
-                        <div class="bg-gray-900 text-white p-2 rounded-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-electric-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                        </div>
+                        <img src="BWIREEEEEEE.png" alt="Bwire Aesthetic Shop Logo" class="h-14 w-auto">
                         <span class="text-xl font-bold text-gray-900">Bwire Aesthetic Shop</span>
                     </a>
-
+                    
                     <!-- Desktop Navigation -->
                     <div class="hidden md:flex items-center space-x-8">
                         <a href="#" class="text-gray-600 hover:text-electric-blue transition-colors duration-300 nav-link" data-page="home">Home</a>
@@ -109,10 +153,27 @@
                         <a href="#" class="text-gray-600 hover:text-electric-blue transition-colors duration-300 nav-link" data-page="about">About Us</a>
                         <a href="#" class="text-gray-600 hover:text-electric-blue transition-colors duration-300 nav-link" data-page="contact">Contact</a>
                         <a href="#" class="text-gray-600 hover:text-electric-blue transition-colors duration-300 nav-link" data-page="blog">Blog</a>
+                        <a href="#" class="text-gray-600 hover:text-electric-blue transition-colors duration-300 nav-link" data-page="community">Community</a>
                     </div>
 
                     <!-- Right side icons -->
                     <div class="flex items-center space-x-4">
+                        <!-- Notification Bell -->
+                        <div class="relative">
+                            <button id="notification-bell" class="text-gray-600 hover:text-electric-blue transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                </svg>
+                                <span id="notification-badge" class="hidden bg-red-500 text-white rounded-full flex items-center justify-center notification-badge">0</span>
+                            </button>
+                            <div id="notification-dropdown" class="hidden absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl overflow-hidden z-50">
+                                <div class="p-4 font-bold border-b">Notifications</div>
+                                <div id="notification-list" class="max-h-96 overflow-y-auto">
+                                    <!-- Notifications will be injected here -->
+                                </div>
+                            </div>
+                        </div>
+
                         <button id="cart-button" class="relative text-gray-600 hover:text-electric-blue transition-colors duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -139,6 +200,7 @@
                     <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded nav-link" data-page="about">About Us</a>
                     <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded nav-link" data-page="contact">Contact</a>
                     <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded nav-link" data-page="blog">Blog</a>
+                    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200 rounded nav-link" data-page="community">Community</a>
                 </div>
             </nav>
         </header>
@@ -148,11 +210,23 @@
             <!-- Page: Home -->
             <div id="home-page" class="page">
                 <!-- Hero Section -->
-                <section class="bg-gray-900 text-white">
-                    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 text-center">
+                <section 
+                    class="relative bg-gray-900 text-white min-h-[60vh] md:min-h-[80vh]" 
+                    style="background: url('BWIREEEEEEE.png') center/cover no-repeat;">
+                    <!-- Blur/Dark Overlay -->
+                    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+                    
+                    <!-- Content -->
+                    <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 text-center">
                         <h1 class="text-4xl md:text-6xl font-bold mb-4">Quality Tech, Aesthetic Vibe.</h1>
-                        <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your one-stop shop for electronics and phone accessories in Kenya. Built for the modern you.</p>
-                        <a href="#" class="bg-electric-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 duration-300 nav-link" data-page="shop">Shop Now</a>
+                        <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                            Your one-stop shop for electronics and phone accessories in Kenya. Built for the modern you.
+                        </p>
+                        <a href="#" 
+                           class="bg-electric-blue hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 duration-300 nav-link" 
+                           data-page="shop">
+                            Shop Now
+                        </a>
                     </div>
                 </section>
 
@@ -177,7 +251,7 @@
                 </section>
 
                 <!-- Testimonials Section -->
-                <section class="py-16 bg-white">
+                <section id="testimonials-section" class="py-16 bg-white">
                     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 class="text-3xl font-bold text-center mb-10">What Our Customers Say</h2>
                         <div id="testimonials" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -258,9 +332,9 @@
                         <div class="bg-white p-8 rounded-lg shadow-lg">
                             <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
                             <div class="space-y-4">
-                                <p class="flex items-center"><svg class="w-6 h-6 mr-3 text-electric-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> support@bwireaesthetic.co.ke</p>
-                                <a href="https://wa.me/254712345678" target="_blank" class="flex items-center text-green-500 hover:text-green-600 font-semibold"><svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.888-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg> Chat on WhatsApp</a>
-                                <p class="flex items-center"><svg class="w-6 h-6 mr-3 text-electric-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> Pickup Point: Moi Avenue, Nairobi CBD</p>
+                                <p class="flex items-center"><svg class="w-6 h-6 mr-3 text-electric-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> <span id="contact-email"></span></p>
+                                <a id="contact-whatsapp" href="#" target="_blank" class="flex items-center text-green-500 hover:text-green-600 font-semibold"><svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.888-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg> Chat on WhatsApp</a>
+                                <p class="flex items-center"><svg class="w-6 h-6 mr-3 text-electric-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> <span id="contact-pickup"></span></p>
                             </div>
                             <div class="mt-8">
                                 <h3 class="text-xl font-bold mb-4">Follow Us</h3>
@@ -304,36 +378,235 @@
                 </div>
             </div>
             
-            <!-- Page: Customer Dashboard -->
-            <div id="dashboard-page" class="page hidden">
-                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <h1 class="text-4xl font-bold text-center mb-10">My Dashboard</h1>
-                    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-                        <div id="login-view">
-                            <h2 class="text-2xl font-bold mb-6 text-center">Login or Sign Up</h2>
-                            <p class="text-center text-gray-600 mb-6">This is a simulation. Login/ Signup Coming Soon</p>
-                             <div class="flex justify-center">
-                                <button id="login-button" class="bg-electric-blue text-white py-2 px-8 rounded-lg hover:bg-blue-600 transition">Log In (Simulated)</button>
-                            </div>
+             <!-- Page: Community -->
+            <div id="community-page" class="page hidden">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                    <!-- This wrapper will be shown when community is active -->
+                    <div id="community-content-wrapper">
+                        <div class="text-center mb-10">
+                            <h1 class="text-4xl font-bold">Community Hub</h1>
+                            <p class="text-lg text-gray-600 mt-2">Connect, share, and learn with fellow tech enthusiasts.</p>
                         </div>
-                        <div id="dashboard-view" class="hidden">
-                            <div class="flex justify-between items-center mb-8">
-                                <h2 class="text-2xl font-bold">Welcome, User!</h2>
-                                <button id="logout-button" class="text-sm text-red-500 hover:underline">Log Out</button>
+
+                        <!-- Live Thread Banner -->
+                        <div id="live-thread-banner" class="hidden mb-6"></div>
+
+                        <div class="flex flex-col lg:flex-row gap-8">
+                            <!-- Main Feed -->
+                            <div class="w-full lg:w-2/3">
+                                <!-- Create Post Form -->
+                                <div id="create-post-container" class="mb-6">
+                                    <div class="bg-white p-5 rounded-lg shadow">
+                                        <h2 class="font-bold text-xl mb-4">Create a Post</h2>
+                                        <div id="post-form-content">
+                                            <textarea id="post-content" rows="4" placeholder="What's on your mind? Use #hashtags to categorize and @username to mention." class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-electric-blue"></textarea>
+                                            <div class="flex items-center justify-between mt-3">
+                                                <label class="flex items-center text-sm text-gray-600">
+                                                    <input type="checkbox" id="post-anonymously-checkbox" class="h-4 w-4 rounded border-gray-300 text-electric-blue focus:ring-electric-blue">
+                                                    <span class="ml-2">Post Anonymously</span>
+                                                </label>
+                                                <button id="create-post-btn" class="bg-electric-blue text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">Post</button>
+                                            </div>
+                                        </div>
+                                        <div id="post-login-prompt" class="hidden text-center py-4">
+                                            <p class="text-gray-600">You must be logged in to create a post.</p>
+                                            <button class="nav-link mt-2 font-semibold text-electric-blue hover:underline" data-page="dashboard">Login or Sign Up</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sorting Options -->
+                                <div class="flex items-center justify-end mb-4 gap-4">
+                                    <select id="sort-posts" class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-electric-blue">
+                                        <option value="latest">Latest</option>
+                                        <option value="by-date">By Date</option>
+                                    </select>
+                                    <input type="text" id="post-date-picker" class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-electric-blue" placeholder="Select a date">
+                                </div>
+
+                                <!-- Posts Feed -->
+                                <div id="community-posts-feed" class="space-y-6">
+                                    <!-- Posts will be injected here by JS -->
+                                    <p class="text-center text-gray-500 py-8">Loading posts...</p>
+                                </div>
                             </div>
-                            <h3 class="text-xl font-semibold mb-4 border-b pb-2">Order History</h3>
-                            <div id="order-history" class="space-y-4">
-                                <p class="text-gray-500">No orders yet. Start shopping!</p>
-                            </div>
-                             <h3 class="text-xl font-semibold mb-4 border-b pb-2 mt-8">My Wishlist</h3>
-                            <div id="wishlist-items" class="space-y-4">
-                                <p class="text-gray-500">Your wishlist is empty.</p>
-                            </div>
+
+                            <!-- Trending Sidebar -->
+                            <aside class="w-full lg:w-1/3 space-y-6">
+                                <div class="bg-white p-5 rounded-lg shadow">
+                                    <h3 class="font-bold text-lg mb-4 border-b pb-2">Most Liked This Week</h3>
+                                    <div id="most-liked-posts" class="space-y-3">
+                                        <!-- Most liked posts will be injected here -->
+                                    </div>
+                                </div>
+                                <div class="bg-white p-5 rounded-lg shadow">
+                                    <h3 class="font-bold text-lg mb-4 border-b pb-2">Most Commented in 24h</h3>
+                                    <div id="most-commented-posts" class="space-y-3">
+                                        <!-- Most commented posts will be injected here -->
+                                    </div>
+                                </div>
+                                <div class="bg-white p-5 rounded-lg shadow">
+                                    <h3 class="font-bold text-lg mb-4 border-b pb-2">Popular Topics</h3>
+                                    <div id="popular-topics-container" class="flex flex-wrap gap-2">
+                                        <!-- Topics will be injected by JS -->
+                                    </div>
+                                </div>
+                            </aside>
                         </div>
+                    </div>
+                    <!-- This message will be shown when community is disabled -->
+                    <div id="community-disabled-message" class="hidden text-center py-20">
+                        <h2 class="text-3xl font-bold mb-4">Community Hub is on a Coffee Break ☕</h2>
+                        <p class="text-gray-600">Please try again later.</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Page: Customer Dashboard -->
+            <div id="dashboard-page" class="page hidden">
+                 <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+                        
+                        <!-- Logged IN View -->
+                        <div id="dashboard-view" class="hidden">
+                            <!-- Profile Display View -->
+                            <div id="profile-display-view">
+                                <div class="text-center mb-6">
+                                    <h1 class="text-3xl font-bold">My Account</h1>
+                                    <p class="text-gray-600">Welcome back, <span id="user-name" class="font-semibold"></span>!</p>
+                                </div>
+                                <div class="space-y-4">
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2 border-b pb-2">My Details</h3>
+                                        <div class="text-gray-700 space-y-1 text-sm">
+                                            <p><strong>Name:</strong> <span id="display-user-name"></span></p>
+                                            <p><strong>Email:</strong> <span id="display-user-email"></span></p>
+                                            <p><strong>Phone:</strong> <span id="display-user-phone">Not set</span></p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2 border-b pb-2">Order History</h3>
+                                        <div id="order-history" class="space-y-2 max-h-64 overflow-y-auto">
+                                            <p class="text-gray-500">You have no past orders.</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-2 border-b pb-2">My Wishlist</h3>
+                                        <div id="wishlist-items">
+                                            <p class="text-gray-500">Your wishlist is empty.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="edit-profile-btn" class="w-full mt-6 bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-700 transition">Edit Profile</button>
+                                <button id="logout-button" class="w-full mt-2 bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition">Log Out</button>
+                            </div>
+
+                            <!-- Profile Edit Form -->
+                            <div id="profile-edit-view" class="hidden">
+                                <h2 class="text-2xl font-bold mb-6 text-center">Edit Your Details</h2>
+                                <form id="edit-profile-form">
+                                    <div class="mb-4">
+                                        <label for="edit-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                        <input type="text" id="edit-name" required class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="edit-phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                        <input type="tel" id="edit-phone" class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue">
+                                    </div>
+                                    <div class="mt-6 flex items-center justify-end space-x-3">
+                                        <button type="button" id="cancel-edit-profile-btn" class="bg-gray-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-300">Cancel</button>
+                                        <button type="submit" class="bg-electric-blue text-white py-2 px-4 rounded-lg hover:bg-blue-600">Save Changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <!-- Logged OUT View (Login/Signup/Reset) -->
+                        <div id="auth-view">
+                            <!-- Login Form -->
+                            <form id="login-form" class="auth-form">
+                                <h2 class="text-2xl font-bold mb-6 text-center">Login to Your Account</h2>
+                                <div class="mb-4">
+                                    <label for="login-email" class="block text-sm font-medium text-gray-700">Email</label>
+                                    <input type="email" id="login-email" required
+                                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue">
+                                </div>
+                                <div class="mb-4 relative">
+                                    <label for="login-password" class="block text-sm font-medium text-gray-700">Password</label>
+                                    <input type="password" id="login-password" required
+                                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue pr-10">
+                                    <button type="button" id="toggle-login-password"
+                                        class="absolute inset-y-0 right-2 top-6 text-gray-500 hover:text-gray-700 text-sm">Show</button>
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-electric-blue text-white py-2 rounded-lg hover:bg-blue-600">Login</button>
+                                <p class="text-center text-sm text-gray-600 mt-4">
+                                    <a href="#" id="show-forgot-password" class="text-electric-blue hover:underline">Forgot Password?</a>
+                                </p>
+                                <p class="text-center text-sm text-gray-600 mt-2">
+                                    New here? <a href="#" id="show-signup"
+                                        class="text-electric-blue font-semibold hover:underline">Create an account</a>
+                                </p>
+                            </form>
+
+                            <!-- Signup Form -->
+                            <form id="signup-form" class="auth-form hidden">
+                                <h2 class="text-2xl font-bold mb-6 text-center">Create an Account</h2>
+                                <div class="mb-4">
+                                    <label for="signup-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                    <input type="text" id="signup-name" required
+                                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="signup-email" class="block text-sm font-medium text-gray-700">Email</label>
+                                    <input type="email" id="signup-email" required
+                                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue">
+                                </div>
+                                <div class="mb-4 relative">
+                                    <label for="signup-password" class="block text-sm font-medium text-gray-700">Password</label>
+                                    <input type="password" id="signup-password" required
+                                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue pr-10">
+                                    <button type="button" id="toggle-signup-password"
+                                        class="absolute inset-y-0 right-2 top-6 text-gray-500 hover:text-gray-700 text-sm">Show</button>
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-electric-blue text-white py-2 rounded-lg hover:bg-blue-600">Sign Up</button>
+                                <p class="text-center text-sm text-gray-600 mt-4">
+                                    Already have an account? <a href="#" id="show-login"
+                                        class="text-electric-blue font-semibold hover:underline">Login here</a>
+                                </p>
+                            </form>
+                            
+                            <!-- Forgot Password Form -->
+                            <form id="forgot-password-form" class="auth-form hidden">
+                                <h2 class="text-2xl font-bold mb-6 text-center">Reset Password</h2>
+                                <p class="text-center text-sm text-gray-600 mb-4">
+                                    Enter your email and we'll send a recovery link to your inbox.
+                                </p>
+                                <div class="mb-4">
+                                    <label for="reset-email" class="block text-sm font-medium text-gray-700">Email</label>
+                                    <input type="email" id="reset-email" required
+                                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue">
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-electric-blue text-white py-2 rounded-lg hover:bg-blue-600">Send Reset Link</button>
+
+                                <!-- Added notice -->
+                                <p class="mt-4 p-3 text-sm font-semibold text-yellow-800 bg-yellow-100 border border-yellow-300 rounded-lg text-center">
+                                    Please check your <span class="font-bold">Spam</span> or <span class="font-bold">Junk</span> folder if you don't see the email in your inbox.
+                                </p>
+
+                                <p class="text-center text-sm text-gray-600 mt-4">
+                                    Remembered it? <a href="#" id="show-login-from-reset"
+                                        class="text-electric-blue font-semibold hover:underline">Back to Login</a>
+                                </p>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- Footer -->
@@ -369,7 +642,7 @@
                     </div>
                 </div>
                 <div class="border-t border-gray-800 mt-8 py-6 text-center text-gray-500">
-                    <p>&copy; <span id="current-year"></span> Bwire Aesthetic Shop. All Rights Reserved. Prototype by <a href="https://www.instagram.com/eugz_asax/" target="_blank" class="underline hover:text-white">eugz_asax</a>.</p>
+                    <p>&copy; <span id="current-year"></span> Bwire Aesthetic Shop. All Rights Reserved. <span id="footer-note"></span></p>
                 </div>
             </div>
         </footer>
@@ -403,11 +676,11 @@
                  <div id="checkout-form">
                     <div class="mb-4">
                         <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                        <input type="text" value="Test User" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                        <input type="text" id="checkout-name" class="w-full px-3 py-2 border border-gray-300 rounded-md">
                     </div>
                     <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                        <input type="email" value="test@example.com" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <input type="tel" id="checkout-phone" placeholder="e.g., 0712345678" required class="w-full px-3 py-2 border border-gray-300 rounded-md">
                     </div>
                     <h3 class="text-lg font-semibold mt-6 mb-2">Payment Method</h3>
                     <div class="space-y-2">
@@ -415,13 +688,10 @@
                             <input type="radio" name="payment" value="mpesa" class="h-4 w-4 text-electric-blue border-gray-300 focus:ring-electric-blue" checked>
                             <span class="ml-3 font-medium">M-PESA</span>
                         </label>
-                         <label class="flex items-center p-3 border rounded-lg has-[:checked]:bg-blue-50 has-[:checked]:border-electric-blue">
-                            <input type="radio" name="payment" value="card" class="h-4 w-4 text-electric-blue border-gray-300 focus:ring-electric-blue">
-                            <span class="ml-3 font-medium">Card (Pesapal/Flutterwave)</span>
-                        </label>
+                         
                          <label class="flex items-center p-3 border rounded-lg has-[:checked]:bg-blue-50 has-[:checked]:border-electric-blue">
                             <input type="radio" name="payment" value="cod" class="h-4 w-4 text-electric-blue border-gray-300 focus:ring-electric-blue">
-                            <span class="ml-3 font-medium">Cash on Delivery (Nairobi Only)</span>
+                            <span class="ml-3 font-medium">Cash on Delivery </span>
                         </label>
                     </div>
                     <div class="mt-6 flex justify-end space-x-3">
@@ -432,61 +702,77 @@
                  <div id="order-confirmation" class="hidden text-center">
                     <svg class="w-16 h-16 mx-auto text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <h2 class="text-2xl font-bold mb-2">Order Placed Successfully!</h2>
-                    <p class="text-gray-600">Thank you for your purchase. We've sent a confirmation to your email. (This is a simulation).</p>
+                    <p class="text-gray-600">Thank you for your purchase. Your order is being processed.</p>
                     <button id="close-confirmation-button" class="mt-6 bg-electric-blue text-white py-2 px-6 rounded-lg hover:bg-blue-600">Done</button>
                  </div>
             </div>
         </div>
+        
+        <!-- Reset Password with Token Modal -->
+        <div id="reset-token-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+            <div class="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full">
+                <form id="reset-token-form">
+                    <h2 class="text-2xl font-bold mb-4">Change Your Password</h2>
+                    <p class="text-gray-600 text-sm mb-6">A reset token was sent to your email. Please enter it below along with your new password.</p>
+                    <div class="mb-4">
+                        <label for="reset-token-input" class="block text-sm font-medium text-gray-700 mb-1">Reset Token</label>
+                        <input type="text" id="reset-token-input" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue">
+                    </div>
+                    <div class="mb-4">
+                        <label for="reset-new-password" class="block text-sm font-medium text-gray-700 mb-1">New Password</label>
+                        <input type="password" id="reset-new-password" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue">
+                    </div>
+                     <div class="mb-6">
+                        <label for="reset-confirm-password" class="block text-sm font-medium text-gray-700 mb-1">Confirm New Password</label>
+                        <input type="password" id="reset-confirm-password" required class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-electric-blue focus:border-electric-blue">
+                    </div>
+                    <div class="flex items-center justify-between">
+                         <button type="button" id="cancel-reset-token-button" class="bg-gray-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-300">Cancel</button>
+                        <button type="submit" class="bg-electric-blue text-white py-2 px-4 rounded-lg hover:bg-blue-600">Change Password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <!-- Notification Toast -->
-        <div id="toast" class="fixed top-5 right-5 bg-gray-900 text-white py-2 px-5 rounded-lg shadow-lg transform translate-x-[120%] transition-transform duration-500">
+        <div id="toast" class="fixed top-5 right-5 bg-gray-900 text-white py-2 px-5 rounded-lg shadow-lg hidden transition-transform duration-500 z-50">
             <p id="toast-message"></p>
         </div>
 
     </div>
 
     <script>
-    // --- IMPORTANT BACKEND SETUP ---
-    // 1. Create a Google Sheet.
-    // 2. Create tabs: Products, Testimonials, BlogPosts, Orders, Contacts.
-    // 3. Go to Extensions > Apps Script and paste the script provided in the conclusion.
-    // 4. Deploy the script as a Web App (with "Anyone" access).
-    // 5. Paste the Web App URL here.
-    const googleScriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'; // <-- PASTE URL 
-
-    // --- MOCK DATA (---
-    const mockData = {
-        products: [
-            { id: 1, name: "iPhone 14 Pro Case", category: "Phone Cases", brand: "Apple", price: 2500, description: "Sleek and protective case for iPhone 14 Pro.", specs: '{"Material": "Silicone", "Color": "Midnight Black"}', imageUrls: "https://placehold.co/600x600/1a202c/ffffff?text=Case", stock: 15, featured: true },
-            { id: 2, name: "Anker PowerCore 10000", category: "Power Banks", brand: "Anker", price: 4500, description: "Compact and powerful 10000mAh power bank.", specs: '{"Capacity": "10000mAh", "Ports": "USB-A, USB-C"}', imageUrls: "https://placehold.co/600x600/007bff/ffffff?text=PowerBank", stock: 10, featured: true },
-            { id: 3, name: "Samsung 25W Fast Charger", category: "Chargers & Cables", brand: "Samsung", price: 3000, description: "Super fast charging for your Samsung devices.", specs: '{"Wattage": "25W", "Type": "USB-C"}', imageUrls: "https://placehold.co/600x600/e2e8f0/1a202c?text=Charger", stock: 20, featured: false },
-            { id: 4, name: "JBL Tune 510BT", category: "Headphones & Earbuds", brand: "JBL", price: 6000, description: "Wireless on-ear headphones with pure bass sound.", specs: '{"Connectivity": "Bluetooth 5.0", "Battery": "40 hours"}', imageUrls: "https://placehold.co/600x600/1a202c/ffffff?text=Headphones", stock: 8, featured: true },
-            { id: 5, name: "iPhone 14 Pro", category: "Phones", brand: "Apple", price: 145000, description: "The latest and greatest from Apple.", specs: '{"Storage": "256GB", "Color": "Deep Purple"}', imageUrls: "https://placehold.co/600x600/007bff/ffffff?text=iPhone", stock: 5, featured: false },
-            { id: 6, name: "Galaxy S23 Ultra", category: "Phones", brand: "Samsung", price: 130000, description: "The pinnacle of Android smartphones.", specs: '{"Storage": "256GB", "Color": "Phantom Black"}', imageUrls: "https://placehold.co/600x600/e2e8f0/1a202c?text=Galaxy", stock: 7, featured: false },
-            { id: 7, name: "Spigen Glass Protector", category: "Screen Protectors", brand: "Spigen", price: 1500, description: "Tempered glass for ultimate screen protection.", specs: '{"Compatibility": "iPhone 14 Series", "Hardness": "9H"}', imageUrls: "https://placehold.co/600x600/1a202c/ffffff?text=Protector", stock: 30, featured: false },
-            { id: 8, name: "Oraimo Watch ER OSW-42", category: "Smartwatches", brand: "Oraimo", price: 8500, description: "Stylish and functional smartwatch with a vibrant display.", specs: '{"Display": "1.43-inch AMOLED", "OS": "Oraimo OS"}', imageUrls: "https://placehold.co/600x600/007bff/ffffff?text=OraimoWatch", stock: 12, featured: true },
-        ],
-        testimonials: [
-            { name: "Lumumba", quote: "Amazing products and super fast delivery in Nairobi. The BAS team is the best!", rating: 5 },
-            { name: "Eugoooo", quote: "I love the aesthetic of my new phone case. It's exactly what I was looking for. Quality stuff!", rating: 5 },
-            { name: "Hailey", quote: "Finally, a reliable online tech shop in Kenya. Great prices and genuine products. Highly recommend.", rating: 4 },
-        ],
-        blogPosts: [
-            { id: 1, title: "How to Choose the Right Charger", content: "Confused by watts, volts, and amps? This guide breaks it all down to help you pick the perfect charger for your device...", date: "2024-07-20" },
-            { id: 2, title: "Top 5 Must-Have Phone Accessories", content: "Elevate your smartphone experience with these essential accessories, from power banks to premium earbuds...", date: "2024-07-15" },
-            { id: 3, title: "Why a Good Screen Protector is a Must", content: "Think you don't need a screen protector? Think again. We explore why this small investment can save you thousands...", date: "2024-07-10" },
-        ]
+    // --- FIREBASE CONFIGURATION ---
+    const firebaseConfig = {
+      apiKey: "AIzaSyDPp_ks97xu4DDWmz9VGEX6tsqUtKuw8xU",
+      authDomain: "bwire-lum.firebaseapp.com",
+      projectId: "bwire-lum",
+      storageBucket: "bwire-lum.appspot.com",
+      messagingSenderId: "1045615624259",
+      appId: "1:1045615624259:web:ff0311b3120b4cebedd4f6",
+      measurementId: "G-V22Y4WY1BF"
     };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const auth = firebase.auth();
     
     // --- APPLICATION STATE ---
     const state = {
         products: [],
         testimonials: [],
         blogPosts: [],
-        cart: [], // { id, name, price, quantity, imageUrl }
+        communityPosts: [],
+        settings: {},
+        cart: [],
         wishlist: [],
         currentPage: 'home',
-        isLoggedIn: false,
+        currentUser: null, // This will hold the Firebase auth user object
+        currentUserData: null, // This will hold user data from our 'users' collection
+        orders: [],
+        notifications: [],
+        communityPostListener: null, // To hold the unsubscribe function for the listener
     };
 
     // --- DOM ELEMENTS ---
@@ -497,84 +783,412 @@
         about: document.getElementById('about-page'),
         contact: document.getElementById('contact-page'),
         blog: document.getElementById('blog-page'),
+        community: document.getElementById('community-page'),
         dashboard: document.getElementById('dashboard-page'),
     };
     const cartModal = document.getElementById('cart-modal');
-    const cartPanel = document.getElementById('cart-panel');
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
+    const cartSubtotal = document.getElementById('cart-subtotal');
     const checkoutModal = document.getElementById('checkout-modal');
+    const resetTokenModal = document.getElementById('reset-token-modal');
+    const authView = document.getElementById('auth-view');
+    const dashboardView = document.getElementById('dashboard-view');
 
-    // --- UTILITY FUNCTIONS ---
+    // --- UTILITY & API FUNCTIONS ---
     const formatCurrency = (amount) => `Ksh ${new Intl.NumberFormat('en-KE').format(amount)}`;
+    
+    const timeAgo = (date) => {
+        if (!date) return 'Just now';
+        const seconds = Math.floor((new Date() - date) / 1000);
+        let interval = seconds / 31536000;
+        if (interval > 1) return Math.floor(interval) + " years ago";
+        interval = seconds / 2592000;
+        if (interval > 1) return Math.floor(interval) + " months ago";
+        interval = seconds / 86400;
+        if (interval > 1) return Math.floor(interval) + " days ago";
+        interval = seconds / 3600;
+        if (interval > 1) return Math.floor(interval) + " hours ago";
+        interval = seconds / 60;
+        if (interval > 1) return Math.floor(interval) + " minutes ago";
+        return Math.floor(seconds) + " seconds ago";
+    };
 
-    const showToast = (message) => {
+    // NEW: Function to style mentions and hashtags
+    const styleText = (text) => {
+        if (!text) return '';
+        return text
+            .replace(/@(\w+)/g, '<a href="#" class="text-red-500 font-semibold hover:underline" data-mention="$1">@$1</a>')
+            .replace(/#(\w+)/g, '<a href="#" class="text-blue-600 font-semibold hover:underline" data-hashtag="$1">#$1</a>');
+    };
+
+
+    const showToast = (message, isError = false) => {
         const toast = document.getElementById('toast');
-        const toastMessage = document.getElementById('toast-message');
-        toastMessage.textContent = message;
-        toast.classList.remove('translate-x-[120%]');
+        if (!toast) return;
+        toast.querySelector('#toast-message').textContent = message;
+        toast.classList.toggle('bg-red-600', isError);
+        toast.classList.toggle('bg-gray-900', !isError);
+        toast.classList.remove('hidden');
         setTimeout(() => {
-            toast.classList.add('translate-x-[120%]');
+            toast.classList.add('hidden');
         }, 3000);
     };
     
-    // --- NAVIGATION ---
-    const showPage = (pageId) => {
-        if (!pages[pageId]) return;
-        Object.values(pages).forEach(page => page.classList.add('hidden'));
-        pages[pageId].classList.remove('hidden');
-        state.currentPage = pageId;
-        window.scrollTo(0, 0);
+    // --- FORM ERROR HANDLING ---
+    const setInputError = (inputId, isError) => {
+        const input = document.getElementById(inputId);
+        if (input) {
+            input.classList.toggle('border-red-500', isError);
+            input.classList.toggle('border-gray-300', !isError);
+        }
     };
 
-    // --- DATA FETCHING ---
-    const fetchData = async (endpoint) => {
-        if (googleScriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-            console.warn("Google Apps Script URL not set. Using mock data.");
-            return mockData[endpoint] || [];
-        }
+    const clearAllAuthErrors = () => {
+        ['login-email', 'login-password', 'signup-name', 'signup-email', 'signup-password', 'reset-email', 'reset-token-input', 'reset-new-password', 'reset-confirm-password'].forEach(id => setInputError(id, false));
+    };
+
+    // --- AUTHENTICATION LOGIC ---
+    const handleSignUp = async (e) => {
+        e.preventDefault();
+        clearAllAuthErrors();
+        const name = document.getElementById('signup-name').value;
+        const email = document.getElementById('signup-email').value;
+        const password = document.getElementById('signup-password').value;
+        
+        showToast('Creating account...');
         try {
-            const response = await fetch(`${googleScriptURL}?endpoint=${endpoint}`);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const data = await response.json();
-            // The Apps Script returns { data: [...] }.
-            return data.data;
+            const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+            const user = userCredential.user;
+            
+            await user.updateProfile({ displayName: name });
+
+            await db.collection('users').doc(user.uid).set({
+                name: name,
+                email: email,
+                username: name.toLowerCase().replace(/\s/g, ''), // Create a simple username
+                phone: '', // Initialize phone field
+                createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                cart: [],
+                wishlist: []
+            });
+
+            showToast('Account created successfully! Please log in.');
+            switchAuthForm('login-form');
         } catch (error) {
-            console.error(`Failed to fetch ${endpoint}:`, error);
-            showToast(`Error fetching data. Using fallback.`);
-            return mockData[endpoint] || [];
+            showToast(error.message, true);
+            if (error.code === 'auth/email-already-in-use') {
+                 setInputError('signup-email', true);
+            }
+        }
+    };
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        clearAllAuthErrors();
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+        
+        showToast('Logging in...');
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            // The onAuthStateChanged listener will handle the rest
+        } catch (error) {
+            showToast(error.message, true);
+            setInputError('login-email', true);
+            setInputError('login-password', true);
         }
     };
     
-    const postData = async (endpoint, payload) => {
-        if (googleScriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-            console.warn("Google Apps Script URL not set. Simulating POST request.");
-            return { success: true, message: "Simulated success" };
+    const handleLogout = () => {
+        auth.signOut();
+        showToast('You have been logged out.');
+        showPage('home');
+    };
+    
+    const handlePasswordReset = async (e) => {
+        e.preventDefault();
+        clearAllAuthErrors();
+        const email = document.getElementById('reset-email').value;
+        if (!email) {
+            showToast('Please enter your email address.', true);
+            setInputError('reset-email', true);
+            return;
         }
+        showToast('Sending reset token...');
         try {
-            const response = await fetch(googleScriptURL, {
-                method: 'POST',
-                mode: 'no-cors', // Required for simple POST to Apps Script
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ endpoint, payload }),
-            });
-            // no-cors means we can't read the response, so we optimistically assume success
-            return { success: true };
+            await auth.sendPasswordResetEmail(email);
+            showToast('Password reset link sent to your email!');
+            switchAuthForm('login-form');
         } catch (error) {
-            console.error(`Failed to post to ${endpoint}:`, error);
-            showToast(`Error submitting data.`);
-            return { success: false, error };
+            showToast(error.message, true);
+            setInputError('reset-email', true);
+        }
+    };
+    
+    // *** MODIFIED: Added check for disabled users ***
+    auth.onAuthStateChanged(async (user) => {
+        if (user) {
+            const userDocRef = db.collection('users').doc(user.uid);
+            const userDoc = await userDocRef.get();
+
+            if (userDoc.exists && userDoc.data().isDisabled) {
+                auth.signOut();
+                showToast('Your account has been disabled by an administrator.', true);
+                return;
+            }
+
+            state.currentUser = user;
+            userDocRef.onSnapshot(doc => {
+                if (doc.exists) {
+                    state.currentUserData = doc.data();
+                    state.cart = state.currentUserData.cart || [];
+                    state.wishlist = state.currentUserData.wishlist || [];
+                    updateCart();
+                    updateWishlistButtons();
+                    updateDashboardView();
+                }
+            });
+            setupNotificationListener(user.uid);
+        } else {
+            state.currentUser = null;
+            state.currentUserData = null;
+            state.cart = [];
+            state.wishlist = [];
+            state.notifications = [];
+            updateCart();
+            updateWishlistButtons();
+            updateDashboardView();
+            updateNotificationUI();
+        }
+        updateCommunityPostForm();
+        fetchCommunityPosts(); // Refetch posts on auth change
+    });
+    
+    const handleUpdateProfile = async (e) => {
+        e.preventDefault();
+        if (!state.currentUser) return;
+
+        const newName = document.getElementById('edit-name').value;
+        const newPhone = document.getElementById('edit-phone').value;
+
+        showToast('Updating profile...');
+
+        try {
+            if (newName !== state.currentUser.displayName) {
+                await state.currentUser.updateProfile({ displayName: newName });
+            }
+
+            const userDocRef = db.collection('users').doc(state.currentUser.uid);
+            await userDocRef.update({
+                name: newName,
+                phone: newPhone
+            });
+
+            showToast('Profile updated successfully!');
+            
+            await auth.currentUser.reload();
+            state.currentUser = auth.currentUser;
+            
+            document.getElementById('profile-display-view').classList.remove('hidden');
+            document.getElementById('profile-edit-view').classList.add('hidden');
+
+        } catch (error) {
+            console.error("Error updating profile:", error);
+            showToast(`Update failed: ${error.message}`, true);
         }
     };
 
-    // --- RENDER FUNCTIONS ---
+
+    // --- CART LOGIC ---
+    const updateCart = () => {
+        if (!cartItemsContainer) return;
+        if (state.cart.length === 0) {
+            cartItemsContainer.innerHTML = `<p class="text-center text-gray-500">Your cart is empty.</p>`;
+        } else {
+            cartItemsContainer.innerHTML = state.cart.map(item => `
+                <div class="flex items-center justify-between py-3 border-b">
+                    <div class="flex items-center">
+                        <img src="${item.imageUrl || 'https://placehold.co/64x64/e2e8f0/e2e8f0'}" alt="${item.name}" class="w-16 h-16 object-cover rounded-md mr-4">
+                        <div>
+                            <p class="font-semibold">${item.name}</p>
+                            <p class="text-sm text-gray-500">${formatCurrency(item.price)}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="number" value="${item.quantity}" min="1" class="quantity-input w-16 text-center border rounded-md mx-2" data-id="${item.id}">
+                        <button class="remove-from-cart-btn text-red-500 hover:text-red-700" data-id="${item.id}">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm4 0a1 1 0 012 0v6a1 1 0 11-2 0V8z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        const totalItems = state.cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+        const subtotal = state.cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
+        
+        if (cartCount) cartCount.textContent = totalItems;
+        if (cartSubtotal) cartSubtotal.textContent = formatCurrency(subtotal);
+
+        const checkoutButton = document.getElementById('checkout-button');
+        if (checkoutButton) checkoutButton.disabled = state.cart.length === 0;
+    };
+
+    const saveCartToFirestore = async () => {
+        if (!state.currentUser) return;
+        const userDocRef = db.collection('users').doc(state.currentUser.uid);
+        await userDocRef.set({ cart: state.cart }, { merge: true });
+    };
+    
+    const addToCart = (productId) => {
+        const product = state.products.find(p => p.id == productId);
+        if (!product) return;
+        const existingItem = state.cart.find(item => item.id == productId);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            const imageUrl = (product.imageUrls && typeof product.imageUrls === 'string') ? product.imageUrls.split(',')[0] : 'https://placehold.co/200x200';
+            state.cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1, imageUrl: imageUrl });
+        }
+        updateCart();
+        saveCartToFirestore();
+        showToast(`${product.name} added to cart!`);
+    };
+
+    const removeFromCart = (productId) => {
+        state.cart = state.cart.filter(item => item.id != productId);
+        updateCart();
+        saveCartToFirestore();
+        showToast(`Item removed from cart.`);
+    };
+
+    const updateCartQuantity = (productId, quantity) => {
+        const item = state.cart.find(item => item.id == productId);
+        if (item) {
+            const newQuantity = parseInt(quantity, 10);
+            if (newQuantity < 1) {
+                removeFromCart(productId);
+            } else {
+                item.quantity = newQuantity;
+                updateCart();
+                saveCartToFirestore();
+            }
+        }
+    };
+    
+    // --- WISHLIST LOGIC ---
+    const saveWishlistToFirestore = async () => {
+        if (!state.currentUser) return;
+        const userDocRef = db.collection('users').doc(state.currentUser.uid);
+        await userDocRef.set({ wishlist: state.wishlist }, { merge: true });
+    };
+
+    const toggleWishlist = (productId) => {
+        if (!state.currentUser) {
+            showToast('Please log in to use the wishlist.', true);
+            showPage('dashboard');
+            return;
+        }
+        const product = state.products.find(p => p.id === productId);
+        if (!product) return;
+
+        const index = state.wishlist.indexOf(productId);
+        if (index > -1) {
+            state.wishlist.splice(index, 1);
+            showToast(`${product.name} removed from wishlist.`);
+        } else {
+            state.wishlist.push(productId);
+            showToast(`${product.name} added to wishlist!`);
+        }
+        saveWishlistToFirestore();
+    };
+
+    const updateWishlistButtons = () => {
+        document.querySelectorAll('.add-to-wishlist-btn').forEach(btn => {
+            const productId = btn.dataset.id;
+            if (state.wishlist.includes(productId)) {
+                btn.classList.add('wishlist-active');
+            } else {
+                btn.classList.remove('wishlist-active');
+            }
+        });
+    };
+
+    // --- CHECKOUT LOGIC ---
+    const handleCheckout = () => {
+        if (state.cart.length === 0) {
+            showToast('Your cart is empty.', true);
+            return;
+        }
+        const cartPanel = document.getElementById('cart-panel');
+        if (cartModal) {
+            cartPanel.classList.add('translate-x-full');
+            setTimeout(() => cartModal.classList.add('hidden'), 300);
+        }
+        if (checkoutModal) checkoutModal.classList.remove('hidden');
+    };
+
+    const handleConfirmOrder = async () => {
+        if (!state.currentUser) {
+            showToast('Please log in to place an order.', true);
+            if (checkoutModal) checkoutModal.classList.add('hidden');
+            showPage('dashboard');
+            return;
+        }
+        
+        const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value;
+
+        const orderPayload = {
+            orderId: "BAS-" + Date.now().toString().slice(-6),
+            customerName: document.getElementById('checkout-name').value,
+            customerEmail: state.currentUser.email,
+            customerUid: state.currentUser.uid,
+            customerPhone: document.getElementById('checkout-phone').value,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            total: state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+            status: "Pending",
+            items: state.cart,
+            paymentMethod: paymentMethod || 'Not specified'
+        };
+        
+        showToast("Placing your order...");
+        try {
+            await db.collection('orders').add(orderPayload);
+            const checkoutForm = document.getElementById('checkout-form');
+            const orderConfirmation = document.getElementById('order-confirmation');
+            if(checkoutForm) checkoutForm.classList.add('hidden');
+            if(orderConfirmation) orderConfirmation.classList.remove('hidden');
+            state.cart = [];
+            updateCart();
+            saveCartToFirestore();
+        } catch (error) {
+            console.error("Order placement failed:", error);
+            showToast('Could not place order. Please try again.', true);
+        }
+    };
+
+    // --- RENDER & UI FUNCTIONS ---
+    const renderAll = () => {
+        renderFeaturedProducts();
+        renderTestimonials();
+        renderHomeCategories();
+        renderShopProducts();
+        renderShopFilters();
+        renderBlogPosts();
+        renderContactInfo();
+        updateWishlistButtons();
+        renderPopularTopics();
+    };
+    
     const renderFeaturedProducts = () => {
         const container = document.getElementById('featured-products');
+        if (!container) return;
         const featured = state.products.filter(p => p.featured).slice(0, 4);
         container.innerHTML = featured.map(product => `
             <div class="bg-white rounded-lg shadow-md overflow-hidden group transition-transform transform hover:-translate-y-1">
                 <div class="relative">
-                    <img src="${product.imageUrls.split(',')[0]}" alt="${product.name}" class="w-full h-56 object-cover">
+                    <img src="${(product.imageUrls || '').split(',')[0]}" alt="${product.name}" class="w-full h-56 object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
                         <button class="view-product-btn text-white bg-electric-blue py-2 px-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" data-id="${product.id}">Quick View</button>
                     </div>
@@ -591,16 +1205,22 @@
                 </div>
             </div>
         `).join('');
+        updateWishlistButtons();
     };
     
     const renderTestimonials = () => {
         const container = document.getElementById('testimonials');
+        if (!container) return;
+        if (!state.testimonials || state.testimonials.length === 0) {
+            container.innerHTML = `<p class="text-center col-span-full">No testimonials yet.</p>`;
+            return;
+        }
         container.innerHTML = state.testimonials.map(t => `
             <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
                 <p class="text-gray-600 mb-4">"${t.quote}"</p>
                 <div class="flex items-center">
                     <div class="font-bold text-gray-900">${t.name}</div>
-                    <div class="ml-auto flex">
+                    <div class="ml-auto flex text-yellow-400">
                         ${'★'.repeat(t.rating)}${'☆'.repeat(5 - t.rating)}
                     </div>
                 </div>
@@ -610,6 +1230,7 @@
     
     const renderHomeCategories = () => {
         const container = document.getElementById('home-categories');
+        if (!container) return;
         const categories = [...new Set(state.products.map(p => p.category))];
         const icons = {
             "Phones": "M10 2a2 2 0 00-2 2v16a2 2 0 002 2h4a2 2 0 002-2V4a2 2 0 00-2-2h-4z",
@@ -618,7 +1239,14 @@
             "Chargers & Cables": "M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z M13 21.945A9.001 9.001 0 0013 3v1h8.945a9.004 9.004 0 00-8.945 17.945V21z",
             "Power Banks": "M18 10a8 8 0 11-16 0 8 8 0 0116 0z M7 10a1 1 0 100-2 1 1 0 000 2z",
             "Headphones & Earbuds": "M3.055 11H11v8.945A9.001 9.001 0 003.055 11zm0 2H11v-2H3.055a9.004 9.004 0 000 2z",
-            "Smartwatches": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+            "Smartwatches": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+            "Camera": "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z M15 13a3 3 0 11-6 0 3 3 0 016 0z",
+            "Speaker": "M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1V10a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.108 12 5v14c0 .892-1.077 1.337-1.707.707L5.586 15z",
+            "Laptop": "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+            "Desktop PC": "M5 17v-5h14v5a2 2 0 01-2 2H7a2 2 0 01-2-2z M5 7a2 2 0 012-2h10a2 2 0 012 2v3H5V7z",
+            "Mouse": "M12 5a7 7 0 00-7 7v4a7 7 0 1014 0v-4a7 7 0 00-7-7z M12 3v2",
+            "Keyboard": "M19 7H5a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2z M8 11h.01M12 11h.01M16 11h.01M8 14h.01M12 14h.01M16 14h.01",
+            "Electronics": "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6.343l-3.536 3.536m6.364 0L12 6.343m0 9.314l3.536-3.536M12 15.657l-3.536-3.536"
         };
         container.innerHTML = categories.map(cat => `
             <a href="#" class="category-link bg-white p-4 rounded-lg shadow-sm flex flex-col items-center justify-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300" data-category="${cat}">
@@ -630,6 +1258,7 @@
 
     const renderShopProducts = (filters = {}) => {
         const container = document.getElementById('shop-products-grid');
+        if (!container) return;
         let filteredProducts = [...state.products];
 
         if (filters.category) {
@@ -650,7 +1279,7 @@
         container.innerHTML = filteredProducts.map(product => `
             <div class="bg-white rounded-lg shadow-md overflow-hidden group transition-transform transform hover:-translate-y-1">
                 <div class="relative">
-                    <img src="${product.imageUrls.split(',')[0]}" alt="${product.name}" class="w-full h-64 object-cover">
+                    <img src="${(product.imageUrls || '').split(',')[0]}" alt="${product.name}" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
                         <button class="view-product-btn text-white bg-electric-blue py-2 px-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" data-id="${product.id}">View Details</button>
                     </div>
@@ -667,6 +1296,7 @@
                 </div>
             </div>
         `).join('');
+        updateWishlistButtons();
     };
     
     const renderShopFilters = () => {
@@ -674,24 +1304,29 @@
         const brands = [...new Set(state.products.map(p => p.brand))];
         
         const categoryContainer = document.getElementById('filter-category');
-        categoryContainer.innerHTML = categories.map(cat => `
-            <label class="flex items-center">
-                <input type="radio" name="category-filter" value="${cat}" class="h-4 w-4 text-electric-blue border-gray-300 focus:ring-electric-blue">
-                <span class="ml-2 text-sm text-gray-700">${cat}</span>
-            </label>
-        `).join('');
+        if (categoryContainer) {
+            categoryContainer.innerHTML = categories.map(cat => `
+                <label class="flex items-center">
+                    <input type="radio" name="category-filter" value="${cat}" class="h-4 w-4 text-electric-blue border-gray-300 focus:ring-electric-blue">
+                    <span class="ml-2 text-sm text-gray-700">${cat}</span>
+                </label>
+            `).join('');
+        }
 
         const brandContainer = document.getElementById('filter-brand');
-        brandContainer.innerHTML = brands.map(brand => `
-            <label class="flex items-center">
-                <input type="checkbox" value="${brand}" class="filter-brand-checkbox h-4 w-4 text-electric-blue border-gray-300 rounded focus:ring-electric-blue">
-                <span class="ml-2 text-sm text-gray-700">${brand}</span>
-            </label>
-        `).join('');
+        if (brandContainer) {
+            brandContainer.innerHTML = brands.map(brand => `
+                <label class="flex items-center">
+                    <input type="checkbox" value="${brand}" class="filter-brand-checkbox h-4 w-4 text-electric-blue border-gray-300 rounded focus:ring-electric-blue">
+                    <span class="ml-2 text-sm text-gray-700">${brand}</span>
+                </label>
+            `).join('');
+        }
     };
     
     const renderProductPage = (productId) => {
         const product = state.products.find(p => p.id == productId);
+        if (!pages.product) return;
         if (!product) {
             pages.product.innerHTML = `<p class="text-center py-20">Product not found.</p>`;
             showPage('product');
@@ -700,15 +1335,18 @@
         
         let specs = {};
         try {
-            specs = JSON.parse(product.specs);
+            if (product.specs && typeof product.specs === 'string' && product.specs.trim().startsWith('{')) {
+                specs = JSON.parse(product.specs);
+            } else if (typeof product.specs === 'object') {
+                specs = product.specs;
+            }
         } catch(e) { console.error("Invalid specs JSON:", product.specs); }
 
         pages.product.innerHTML = `
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
-                        <img src="${product.imageUrls.split(',')[0]}" alt="${product.name}" class="w-full rounded-lg shadow-lg">
-                        <!-- Add gallery for multiple images if available -->
+                        <img src="${(product.imageUrls || '').split(',')[0]}" alt="${product.name}" class="w-full rounded-lg shadow-lg">
                     </div>
                     <div>
                         <h1 class="text-4xl font-bold mb-2">${product.name}</h1>
@@ -725,7 +1363,7 @@
 
                         <div class="flex items-center space-x-4">
                             <button class="add-to-cart-btn flex-1 bg-electric-blue text-white py-3 rounded-lg hover:bg-blue-600 transition" data-id="${product.id}">Add to Cart</button>
-                            <button class="add-to-wishlist-btn border border-gray-300 rounded-lg p-3 hover:bg-gray-100 hover:border-red-500 hover:text-red-500 transition" data-id="${product.id}">
+                            <button class="add-to-wishlist-btn border border-gray-300 rounded-lg p-3 hover:bg-gray-100 transition" data-id="${product.id}">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"></path></svg>
                             </button>
                         </div>
@@ -739,319 +1377,1174 @@
             </div>
         `;
         showPage('product');
+        updateWishlistButtons();
     };
     
     const renderBlogPosts = () => {
         const container = document.getElementById('blog-posts-container');
-        container.innerHTML = state.blogPosts.map(post => `
+        if (!container) return;
+        if (!state.blogPosts || state.blogPosts.length === 0) {
+            container.innerHTML = `<p class="text-center text-gray-500 col-span-full">No blog posts yet.</p>`;
+            return;
+        }
+        container.innerHTML = state.blogPosts.map(post => {
+            const postDate = post.createdAt?.toDate ? post.createdAt.toDate() : new Date(post.date);
+            const formattedDate = !isNaN(postDate) ? postDate.toLocaleDateString() : 'N/A';
+            
+            return `
              <div class="bg-white rounded-lg shadow-md overflow-hidden group transition-transform transform hover:-translate-y-1">
                 <div class="p-6">
-                    <p class="text-sm text-gray-500 mb-2">${post.date}</p>
+                    <p class="text-sm text-gray-500 mb-2">${formattedDate}</p>
                     <h3 class="font-bold text-xl mb-3">${post.title}</h3>
-                    <p class="text-gray-600 mb-4">${post.content}</p>
+                    <p class="text-gray-600 mb-4">${post.content.substring(0, 100)}...</p>
                     <a href="#" class="font-semibold text-electric-blue hover:underline">Read More &rarr;</a>
                 </div>
             </div>
-        `).join('');
+        `}).join('');
     };
 
-    // --- CART LOGIC ---
-    const updateCart = () => {
-        const cartItemsContainer = document.getElementById('cart-items');
-        const cartCount = document.getElementById('cart-count');
-        const cartSubtotal = document.getElementById('cart-subtotal');
-        const checkoutButton = document.getElementById('checkout-button');
+    const renderContactInfo = () => {
+        const settings = state.settings;
+        const contactEmail = document.getElementById('contact-email');
+        const contactPickup = document.getElementById('contact-pickup');
+        const whatsappLink = document.getElementById('contact-whatsapp');
+        const footerNote = document.getElementById('footer-note');
 
-        cartCount.textContent = state.cart.reduce((sum, item) => sum + item.quantity, 0);
-
-        if (state.cart.length === 0) {
-            cartItemsContainer.innerHTML = `<p class="text-center text-gray-500 py-8">Your cart is empty.</p>`;
-            checkoutButton.disabled = true;
-        } else {
-            cartItemsContainer.innerHTML = state.cart.map(item => `
-                <div class="flex items-center justify-between py-3 border-b">
-                    <div class="flex items-center">
-                        <img src="${item.imageUrl}" alt="${item.name}" class="w-16 h-16 object-cover rounded-md mr-4">
-                        <div>
-                            <p class="font-semibold">${item.name}</p>
-                            <p class="text-sm text-gray-500">${formatCurrency(item.price)}</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <input type="number" value="${item.quantity}" min="1" class="w-12 text-center border rounded-md mx-2 quantity-input" data-id="${item.id}">
-                        <button class="remove-from-cart-btn text-red-500 hover:text-red-700" data-id="${item.id}">&times;</button>
-                    </div>
-                </div>
-            `).join('');
-            checkoutButton.disabled = false;
+        if(contactEmail) contactEmail.textContent = settings.email || 'N/A';
+        if(contactPickup) contactPickup.textContent = `Pickup Point: ${settings.pickup || 'N/A'}`;
+        if (whatsappLink && settings.whatsapp) {
+            whatsappLink.href = `https://wa.me/${settings.whatsapp}`;
         }
-        
-        const subtotal = state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-        cartSubtotal.textContent = formatCurrency(subtotal);
-    };
-
-    const addToCart = (productId) => {
-        const product = state.products.find(p => p.id == productId);
-        if (!product) return;
-
-        const existingItem = state.cart.find(item => item.id == productId);
-        if (existingItem) {
-            existingItem.quantity++;
-        } else {
-            state.cart.push({
-                id: product.id,
-                name: product.name,
-                price: product.price,
-                quantity: 1,
-                imageUrl: product.imageUrls.split(',')[0]
-            });
-        }
-        updateCart();
-        showToast(`${product.name} added to cart!`);
-    };
-
-    const removeFromCart = (productId) => {
-        state.cart = state.cart.filter(item => item.id != productId);
-        updateCart();
-        showToast(`Item removed from cart.`);
-    };
-
-    const updateCartQuantity = (productId, quantity) => {
-        const item = state.cart.find(item => item.id == productId);
-        if (item) {
-            item.quantity = parseInt(quantity, 10);
-            if (item.quantity < 1) {
-                removeFromCart(productId);
-            } else {
-                updateCart();
-            }
+        if (footerNote && settings.footerNote) {
+            footerNote.innerHTML = `Site by <a href="https://www.instagram.com/eugz_asax/" target="_blank" class="underline hover:text-white">@eugz_asax</a>.`;
         }
     };
-    
-    const toggleCartModal = (show) => {
-        if (show) {
-            cartModal.classList.remove('hidden');
-            setTimeout(() => cartPanel.classList.remove('translate-x-full'), 10);
-        } else {
-            cartPanel.classList.add('translate-x-full');
-            setTimeout(() => cartModal.classList.add('hidden'), 300);
-        }
-    };
-    
-    // --- WISHLIST LOGIC ---
-    const addToWishlist = (productId) => {
-        const product = state.products.find(p => p.id == productId);
-        if (!product) return;
-        
-        if (!state.wishlist.find(item => item.id == productId)) {
-            state.wishlist.push(product);
-            showToast(`${product.name} added to wishlist!`);
+
+    const updateDashboardView = async () => {
+        if (!authView || !dashboardView) return;
+        if (state.currentUser) {
+            authView.classList.add('hidden');
+            dashboardView.classList.remove('hidden');
+
+            document.getElementById('user-name').textContent = state.currentUser.displayName;
+            document.getElementById('display-user-name').textContent = state.currentUser.displayName;
+            document.getElementById('display-user-email').textContent = state.currentUser.email;
+            document.getElementById('display-user-phone').textContent = state.currentUserData?.phone || 'Not set';
+
+            document.getElementById('edit-name').value = state.currentUser.displayName;
+            document.getElementById('edit-phone').value = state.currentUserData?.phone || '';
+
+            await renderOrderHistory();
             renderWishlist();
         } else {
-            showToast(`${product.name} is already in your wishlist.`);
+            authView.classList.remove('hidden');
+            dashboardView.classList.add('hidden');
         }
     };
     
+    const renderOrderHistory = async () => {
+        const container = document.getElementById('order-history');
+        if (!container || !state.currentUser) return;
+        
+        // This can also be converted to a real-time listener if needed
+        const orderSnapshot = await db.collection('orders').where('customerUid', '==', state.currentUser.uid).orderBy('timestamp', 'desc').get();
+        const userOrders = orderSnapshot.docs.map(doc => doc.data());
+
+        if (userOrders.length === 0) {
+            container.innerHTML = `<p class="text-gray-500">You have no past orders.</p>`;
+            return;
+        }
+        container.innerHTML = userOrders.map(order => {
+            let itemsHtml = (order.items || []).map(item => `<li>${item.quantity} x ${item.name}</li>`).join('');
+            const orderDate = order.timestamp?.toDate ? order.timestamp.toDate() : new Date();
+
+            return `
+                <div class="border p-3 rounded-md mb-2">
+                    <div class="flex justify-between font-semibold">
+                        <p>Order #${order.orderId}</p>
+                        <p>${formatCurrency(order.total)}</p>
+                    </div>
+                    <p class="text-sm text-gray-500">${orderDate.toLocaleDateString()}</p>
+                    <ul class="text-sm list-disc list-inside mt-2 text-gray-600">
+                        ${itemsHtml}
+                    </ul>
+                    <p class="text-right mt-2 font-semibold text-sm">Status: <span class="text-electric-blue">${order.status}</span></p>
+                </div>
+                `
+            }).join('');
+    };
+
     const renderWishlist = () => {
         const container = document.getElementById('wishlist-items');
+        if (!container) return;
+
         if (state.wishlist.length === 0) {
             container.innerHTML = `<p class="text-gray-500">Your wishlist is empty.</p>`;
         } else {
-            container.innerHTML = state.wishlist.map(item => `
-                <div class="flex items-center justify-between py-2 border-b">
-                    <p>${item.name}</p>
-                    <button class="view-product-btn text-sm text-electric-blue hover:underline" data-id="${item.id}">View</button>
+            container.innerHTML = state.wishlist.map(productId => {
+                const product = state.products.find(p => p.id === productId);
+                if (!product) return '';
+                return `
+                    <div class="flex items-center justify-between py-2 border-b">
+                        <div class="flex items-center">
+                            <img src="${(product.imageUrls || '').split(',')[0]}" alt="${product.name}" class="w-12 h-12 object-cover rounded-md mr-4">
+                            <div>
+                                <p class="font-semibold">${product.name}</p>
+                                <p class="text-sm text-gray-500">${formatCurrency(product.price)}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <button class="add-to-cart-btn bg-gray-200 hover:bg-electric-blue hover:text-white rounded-full p-2 transition" data-id="${product.id}">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                            </button>
+                            <button class="remove-from-wishlist-btn text-red-500 hover:text-red-700 ml-2 p-2" data-id="${product.id}">
+                               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm4 0a1 1 0 012 0v6a1 1 0 11-2 0V8z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+    };
+    
+    const switchAuthForm = (formIdToShow) => {
+        clearAllAuthErrors();
+        document.querySelectorAll('.auth-form').forEach(form => form.classList.add('hidden'));
+        const formToShow = document.getElementById(formIdToShow);
+        if (formToShow) {
+            formToShow.classList.remove('hidden');
+        }
+    };
+
+    const showPage = (pageId) => {
+        if (!pages[pageId]) {
+            console.error(`Page with ID "${pageId}" not found in pages object.`);
+            return;
+        }
+        Object.values(pages).forEach(page => {
+            if (page) {
+                page.classList.add('hidden');
+            }
+        });
+        pages[pageId].classList.remove('hidden');
+        state.currentPage = pageId;
+        window.scrollTo(0, 0);
+        // NEW: Save current page to localStorage
+        localStorage.setItem('bwire-shop-currentPage', pageId);
+    };
+
+    // --- COMMUNITY PAGE LOGIC ---
+    const updateCommunityPostForm = () => {
+        const formContent = document.getElementById('post-form-content');
+        const loginPrompt = document.getElementById('post-login-prompt');
+        if (!formContent || !loginPrompt) return;
+
+        if (state.currentUser) {
+            formContent.classList.remove('hidden');
+            loginPrompt.classList.add('hidden');
+        } else {
+            formContent.classList.add('hidden');
+            loginPrompt.classList.remove('hidden');
+        }
+    };
+
+    const processMentions = async (text, postId) => {
+        const mentions = text.match(/@(\w+)/g);
+        if (!mentions) return;
+
+        const usernames = mentions.map(m => m.substring(1));
+        const usersSnapshot = await db.collection('users').where('username', 'in', usernames).get();
+        
+        usersSnapshot.forEach(doc => {
+            const mentionedUser = doc.data();
+            if (mentionedUser.email !== state.currentUser.email) { // Don't notify self
+                const notification = {
+                    senderId: state.currentUser.uid,
+                    senderName: state.currentUser.displayName,
+                    recipientId: doc.id,
+                    postId: postId,
+                    message: text.substring(0, 50) + '...',
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    isRead: false,
+                };
+                db.collection('notifications').add(notification);
+            }
+        });
+    };
+    
+    // NEW: Process hashtags and update counts
+    const processHashtags = async (text) => {
+        const hashtags = text.match(/#(\w+)/g);
+        if (!hashtags) return;
+
+        const uniqueTags = [...new Set(hashtags.map(tag => tag.substring(1).toLowerCase()))];
+        
+        const batch = db.batch();
+        uniqueTags.forEach(tagName => {
+            const tagRef = db.collection('tags').doc(tagName);
+            batch.set(tagRef, { 
+                name: tagName,
+                count: firebase.firestore.FieldValue.increment(1),
+                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+            }, { merge: true });
+        });
+        await batch.commit();
+    };
+
+    const handleCreatePost = async () => {
+        if (!state.currentUser) {
+            showToast('You need to be logged in to post.', true);
+            return;
+        }
+        const contentEl = document.getElementById('post-content');
+        const content = contentEl.value.trim();
+        const isAnonymous = document.getElementById('post-anonymously-checkbox').checked;
+
+        if (!content) {
+            showToast('Post content cannot be empty.', true);
+            return;
+        }
+
+        const post = {
+            authorId: state.currentUser.uid,
+            authorName: isAnonymous ? 'Anonymous' : state.currentUser.displayName,
+            originalAuthorName: state.currentUser.displayName, // Always store for admin
+            isAnonymous: isAnonymous,
+            content: content,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            likes: [],
+            comments: [],
+            commentCount: 0,
+            isLiveThread: false,
+        };
+
+        try {
+            const docRef = await db.collection('community_posts').add(post);
+            await processMentions(content, docRef.id);
+            await processHashtags(content);
+            contentEl.value = '';
+            document.getElementById('post-anonymously-checkbox').checked = false;
+            showToast('Post created successfully!');
+        } catch (error) {
+            console.error("Error creating post:", error);
+            showToast('Could not create post. Please try again.', true);
+        }
+    };
+
+    const handleToggleLike = async (postId) => {
+        if (!state.currentUser) {
+            showToast('Please log in to like posts.', true);
+            return;
+        }
+
+        const postRef = db.collection('community_posts').doc(postId);
+        const userId = state.currentUser.uid;
+
+        try {
+            await db.runTransaction(async (transaction) => {
+                const doc = await transaction.get(postRef);
+                if (!doc.exists) return;
+
+                let likes = doc.data().likes || [];
+                if (likes.includes(userId)) {
+                    transaction.update(postRef, {
+                        likes: firebase.firestore.FieldValue.arrayRemove(userId)
+                    });
+                } else {
+                    transaction.update(postRef, {
+                        likes: firebase.firestore.FieldValue.arrayUnion(userId)
+                    });
+                }
+            });
+        } catch (error) {
+            console.error("Error toggling like:", error);
+            showToast("Couldn't update like status.", true);
+        }
+    };
+    
+    const handleAddComment = async (postId, parentId = null) => {
+        if (!state.currentUser) {
+            showToast('Please log in to comment.', true);
+            return;
+        }
+
+        const isReply = parentId !== null;
+        const inputId = isReply ? `reply-input-${parentId}` : `comment-input-${postId}`;
+        const checkboxId = isReply ? `reply-anonymously-${parentId}` : `comment-anonymously-${postId}`;
+        
+        const commentInput = document.getElementById(inputId);
+        const anonymousCheckbox = document.getElementById(checkboxId);
+        
+        const content = commentInput.value.trim();
+        const isAnonymous = anonymousCheckbox.checked;
+
+        if (!content) {
+            showToast('Comment cannot be empty.', true);
+            return;
+        }
+
+        const newComment = {
+            id: `comment-${Date.now()}`,
+            authorId: state.currentUser.uid,
+            authorName: isAnonymous ? 'Anonymous' : state.currentUser.displayName,
+            originalAuthorName: state.currentUser.displayName,
+            isAnonymous: isAnonymous,
+            content: content,
+            createdAt: new Date().toISOString(),
+            replies: [],
+            likes: []
+        };
+
+        const postRef = db.collection('community_posts').doc(postId);
+        try {
+            await db.runTransaction(async (transaction) => {
+                const doc = await transaction.get(postRef);
+                if (!doc.exists) return;
+
+                let postData = doc.data();
+                let comments = postData.comments || [];
+
+                if (parentId) {
+                    const findAndAddReply = (commentArray) => {
+                        for (let comment of commentArray) {
+                            if (comment.id === parentId) {
+                                comment.replies = comment.replies || [];
+                                comment.replies.push(newComment);
+                                return true;
+                            }
+                            if (comment.replies && comment.replies.length > 0) {
+                                if (findAndAddReply(comment.replies)) return true;
+                            }
+                        }
+                        return false;
+                    };
+                    findAndAddReply(comments);
+                } else {
+                    comments.push(newComment);
+                }
+                
+                transaction.update(postRef, { 
+                    comments,
+                    commentCount: firebase.firestore.FieldValue.increment(1)
+                });
+            });
+            
+            await processMentions(content, postId);
+            await processHashtags(content);
+            commentInput.value = '';
+            anonymousCheckbox.checked = false;
+        } catch (error) {
+            console.error("Error adding comment:", error);
+            showToast("Could not add comment.", true);
+        }
+    };
+
+    // NEW: Function to handle liking comments
+    const handleToggleCommentLike = async (postId, commentId) => {
+        if (!state.currentUser) {
+            showToast('Please log in to like comments.', true);
+            return;
+        }
+        const postRef = db.collection('community_posts').doc(postId);
+        const userId = state.currentUser.uid;
+
+        try {
+            await db.runTransaction(async (transaction) => {
+                const doc = await transaction.get(postRef);
+                if (!doc.exists) return;
+
+                let comments = doc.data().comments || [];
+                
+                const findAndToggleLike = (commentArray) => {
+                    for (let comment of commentArray) {
+                        if (comment.id === commentId) {
+                            comment.likes = comment.likes || [];
+                            const likeIndex = comment.likes.indexOf(userId);
+                            if (likeIndex > -1) {
+                                comment.likes.splice(likeIndex, 1);
+                            } else {
+                                comment.likes.push(userId);
+                            }
+                            return true;
+                        }
+                        if (comment.replies && findAndToggleLike(comment.replies)) {
+                            return true;
+                        }
+                    }
+                    return false;
+                };
+
+                if (findAndToggleLike(comments)) {
+                    transaction.update(postRef, { comments });
+                }
+            });
+        } catch (error) {
+            console.error("Error toggling comment like:", error);
+            showToast("Couldn't update comment like.", true);
+        }
+    };
+
+    const handleDeletePost = async (postId) => {
+        if (!confirm("Are you sure you want to delete this post? This cannot be undone.")) {
+            return;
+        }
+        try {
+            await db.collection('community_posts').doc(postId).delete();
+            showToast('Post deleted.');
+        } catch (error) {
+            console.error("Error deleting post:", error);
+            showToast('Could not delete post.', true);
+        }
+    };
+    
+    const handleDeleteComment = async (postId, commentId) => {
+        if (!confirm("Are you sure you want to delete this comment?")) {
+            return;
+        }
+        const postRef = db.collection('community_posts').doc(postId);
+        try {
+            await db.runTransaction(async (transaction) => {
+                const doc = await transaction.get(postRef);
+                if (!doc.exists) return;
+
+                let postData = doc.data();
+                let comments = postData.comments || [];
+                let commentRemoved = false;
+
+                const findAndRemove = (commentArray) => {
+                    for (let i = 0; i < commentArray.length; i++) {
+                        if (commentArray[i].id === commentId) {
+                            commentArray.splice(i, 1);
+                            return true;
+                        }
+                        if (commentArray[i].replies && commentArray[i].replies.length > 0) {
+                            if (findAndRemove(commentArray[i].replies)) return true;
+                        }
+                    }
+                    return false;
+                };
+
+                commentRemoved = findAndRemove(comments);
+                if(commentRemoved){
+                    transaction.update(postRef, { 
+                        comments,
+                        commentCount: firebase.firestore.FieldValue.increment(-1)
+                    });
+                }
+            });
+            showToast("Comment deleted.");
+        } catch (error) {
+            console.error("Error deleting comment:", error);
+            showToast("Could not delete comment.", true);
+        }
+    };
+    
+    // *** MODIFIED: renderCommentsRecursive to match YouTube style ***
+    const renderCommentsRecursive = (comments, postId) => {
+        if (!comments || comments.length === 0) return '';
+        
+        const sortedComments = comments.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+        
+        return sortedComments.map(comment => {
+            const isOwner = state.currentUser && comment.authorId === state.currentUser.uid;
+            const isLiked = state.currentUser && comment.likes?.includes(state.currentUser.uid);
+            
+            const avatarHtml = comment.isAnonymous
+                ? `<div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center">
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                       </svg>
+                   </div>`
+                : `<div class="flex-shrink-0 h-10 w-10 rounded-full bg-electric-blue flex items-center justify-center font-bold text-white text-xl">
+                       ${comment.authorName.charAt(0)}
+                   </div>`;
+
+            const replies = comment.replies || [];
+            const repliesHtml = renderCommentsRecursive(replies, postId);
+            
+            return `
+            <div class="comment-thread mt-4">
+                <div class="flex items-start space-x-3">
+                    ${avatarHtml}
+                    <div class="flex-grow">
+                        <div class="flex items-center space-x-2">
+                            <p class="font-semibold text-sm">${comment.authorName}</p>
+                            <p class="text-xs text-gray-500">${timeAgo(new Date(comment.createdAt))}</p>
+                        </div>
+                        <p class="text-sm mt-1">${styleText(comment.content)}</p>
+                        <div class="flex items-center space-x-4 mt-2 text-sm text-gray-600">
+                            <button class="comment-like-btn flex items-center space-x-1 hover:text-red-500 ${isLiked ? 'liked' : ''}" data-post-id="${postId}" data-comment-id="${comment.id}">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                                </svg>
+                                <span>${comment.likes?.length || 0}</span>
+                            </button>
+                            <button class="reply-btn font-semibold hover:underline" data-post-id="${postId}" data-comment-id="${comment.id}">Reply</button>
+                            ${isOwner ? `<button class="delete-comment-btn text-red-500 hover:underline font-semibold" data-post-id="${postId}" data-comment-id="${comment.id}">Delete</button>` : ''}
+                        </div>
+                        <div id="reply-form-${comment.id}" class="hidden mt-3">
+                            <div class="flex items-start space-x-3">
+                                <div class="flex-shrink-0 h-8 w-8 rounded-full bg-gray-400"></div>
+                                <div class="w-full">
+                                    <textarea id="reply-input-${comment.id}" rows="1" placeholder="Add a reply..." class="w-full border-b-2 p-1 text-sm focus:outline-none focus:border-electric-blue transition"></textarea>
+                                    <div class="flex items-center justify-between mt-2">
+                                        <label class="flex items-center text-xs text-gray-500">
+                                            <input type="checkbox" id="reply-anonymously-${comment.id}" class="h-4 w-4 rounded border-gray-300 text-electric-blue focus:ring-electric-blue">
+                                            <span class="ml-2">Reply Anonymously</span>
+                                        </label>
+                                        <div>
+                                            <button class="cancel-reply-btn text-sm font-semibold px-3 py-1 rounded-full hover:bg-gray-200" data-comment-id="${comment.id}">Cancel</button>
+                                            <button class="add-reply-btn bg-electric-blue text-white rounded-full px-4 py-1 text-sm font-semibold hover:bg-blue-600" data-post-id="${postId}" data-parent-id="${comment.id}">Reply</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        ${replies.length > 0 ? `
+                            <div class="mt-2">
+                                <button class="view-replies-btn text-blue-600 font-semibold text-sm flex items-center space-x-1" data-comment-id="${comment.id}">
+                                    <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    <span>${replies.length} ${replies.length > 1 ? 'replies' : 'reply'}</span>
+                                </button>
+                                <div class="replies-container hidden pl-6 border-l-2 border-gray-200 ml-5">
+                                    ${repliesHtml}
+                                </div>
+                            </div>
+                        ` : ''}
+                    </div>
                 </div>
+            </div>
+            `;
+        }).join('');
+    };
+
+    const renderCommunityPosts = () => {
+        const feedContainer = document.getElementById('community-posts-feed');
+        if (!feedContainer) return;
+        
+        if (state.communityPosts.length === 0) {
+            feedContainer.innerHTML = `<p class="text-center text-gray-500 py-8">No posts yet. Be the first to share something!</p>`;
+            return;
+        }
+
+        feedContainer.innerHTML = state.communityPosts.map(post => {
+            const postDate = post.createdAt?.toDate ? post.createdAt.toDate() : new Date();
+            const isLiked = state.currentUser && post.likes.includes(state.currentUser.uid);
+            const isOwner = state.currentUser && post.authorId === state.currentUser.uid;
+            
+            const totalComments = post.commentCount || 0;
+            const commentsHtml = renderCommentsRecursive(post.comments, post.id);
+            
+            const avatarHtml = post.isAnonymous
+                ? `<div class="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center">
+                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                       </svg>
+                   </div>`
+                : `<div class="h-10 w-10 rounded-full bg-electric-blue flex items-center justify-center font-bold text-white text-xl">
+                       ${post.authorName.charAt(0)}
+                   </div>`;
+
+            const archivedBadge = post.isArchived ? `<span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Archived</span>` : '';
+
+            const commentSectionHtml = post.isArchived
+                ? `<div class="mt-4 text-center text-sm text-gray-500 italic p-4 bg-gray-100 rounded-lg">This post was archived, new comments and replies are disabled.</div>`
+                : `<div class="comments-section mt-2">
+                     <div class="add-comment-form mt-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-gray-400"></div>
+                            <div class="w-full">
+                                <textarea id="comment-input-${post.id}" rows="1" placeholder="Add a comment..." class="w-full border-b-2 p-1 text-sm focus:outline-none focus:border-electric-blue transition"></textarea>
+                                <div class="flex items-center justify-between mt-2">
+                                    <label class="flex items-center text-xs text-gray-500">
+                                        <input type="checkbox" id="comment-anonymously-${post.id}" class="h-4 w-4 rounded border-gray-300 text-electric-blue focus:ring-electric-blue">
+                                        <span class="ml-2">Comment Anonymously</span>
+                                    </label>
+                                    <button class="add-comment-btn bg-electric-blue text-white rounded-full px-4 py-1 text-sm font-semibold hover:bg-blue-600" data-id="${post.id}">Comment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments-container mt-4">
+                        ${commentsHtml}
+                    </div>
+                </div>`;
+
+            return `
+            <div class="bg-white p-5 rounded-lg shadow" id="post-${post.id}">
+                <div class="flex justify-between items-start">
+                    <div class="flex items-center space-x-3">
+                        ${avatarHtml}
+                        <div>
+                            <p class="font-bold">${post.authorName}</p>
+                            <p class="text-xs text-gray-500">${timeAgo(postDate)}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        ${archivedBadge}
+                        ${isOwner ? `<button class="delete-post-btn text-red-500 hover:text-red-700" data-id="${post.id}">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm4 0a1 1 0 012 0v6a1 1 0 11-2 0V8z" clip-rule="evenodd"></path></svg>
+                        </button>` : ''}
+                    </div>
+                </div>
+                <p class="my-4 text-gray-800 break-words">${styleText(post.content)}</p>
+                <div class="flex items-center space-x-6 text-sm text-gray-600 border-b pb-3">
+                    <button class="like-button flex items-center space-x-1 hover:text-red-500 transition-colors ${isLiked ? 'liked' : ''}" data-id="${post.id}">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                        </svg>
+                        <span>${post.likes.length}</span>
+                    </button>
+                    <div class="flex items-center space-x-1">
+                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        <span>${totalComments} Comment${totalComments !== 1 ? 's' : ''}</span>
+                    </div>
+                </div>
+                ${commentSectionHtml}
+            </div>
+            `;
+        }).join('');
+    };
+    
+    // UPDATED: Render popular topics from the 'tags' collection
+    const renderPopularTopics = () => {
+        const container = document.getElementById('popular-topics-container');
+        if (!container) return;
+        
+        db.collection('tags').orderBy('count', 'desc').limit(10).onSnapshot(snapshot => {
+            if (snapshot.empty) {
+                container.innerHTML = `<span class="text-xs text-gray-500">No topics yet.</span>`;
+                return;
+            }
+            const tags = snapshot.docs.map(doc => doc.data());
+            container.innerHTML = tags.map(tag => 
+                `<span class="bg-blue-100 text-electric-blue text-xs font-semibold px-2.5 py-1 rounded-full">#${tag.name}</span>`
+            ).join('');
+        }, error => {
+            console.error("Error fetching popular topics:", error);
+            container.innerHTML = `<span class="text-xs text-red-500">Could not load topics.</span>`;
+        });
+    };
+
+    // --- REALTIME LISTENERS & DATA FETCHING ---
+    const setupRealtimeListeners = () => {
+        db.collection('products').onSnapshot(snapshot => {
+            state.products = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            renderAll();
+        });
+
+        db.collection('testimonials').onSnapshot(snapshot => {
+            state.testimonials = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            renderTestimonials();
+        });
+
+        db.collection('blogPosts').onSnapshot(snapshot => {
+            state.blogPosts = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            renderBlogPosts();
+        });
+
+        db.collection('settings').doc('siteConfig').onSnapshot(doc => {
+            state.settings = doc.exists ? doc.data() : {};
+            renderContactInfo();
+        });
+        
+        // NEW: Listener for community settings
+        db.collection('settings').doc('communityConfig').onSnapshot(doc => {
+            state.settings.communityConfig = doc.exists ? doc.data() : { isActive: true };
+            updateCommunityPageVisibility();
+        });
+
+        fetchCommunityPosts();
+        fetchTrendingData();
+        fetchLiveThread();
+        renderPopularTopics(); // Initial call
+    };
+    
+    // NEW: Function to show/hide community page content
+    const updateCommunityPageVisibility = () => {
+        const contentWrapper = document.getElementById('community-content-wrapper');
+        const disabledMessage = document.getElementById('community-disabled-message');
+        if (!contentWrapper || !disabledMessage) return;
+
+        const isActive = state.settings.communityConfig?.isActive !== false; // Default to true if undefined
+
+        if (isActive) {
+            contentWrapper.style.display = 'block';
+            disabledMessage.style.display = 'none';
+        } else {
+            contentWrapper.style.display = 'none';
+            disabledMessage.style.display = 'block';
+        }
+    };
+
+    const fetchCommunityPosts = () => {
+        if (state.communityPostListener) {
+            state.communityPostListener(); // Unsubscribe from previous listener
+        }
+
+        let query = db.collection('community_posts');
+        const sortValue = document.getElementById('sort-posts').value;
+        const datePickerEl = document.getElementById('post-date-picker');
+        const datePicker = datePickerEl._flatpickr; // FIX: Get instance from element
+
+        if (sortValue === 'by-date' && datePicker && datePicker.selectedDates.length > 0) {
+            const selectedDate = datePicker.selectedDates[0];
+            const startOfDay = new Date(selectedDate.setHours(0, 0, 0, 0));
+            const endOfDay = new Date(selectedDate.setHours(23, 59, 59, 999));
+            query = query.where('createdAt', '>=', startOfDay).where('createdAt', '<=', endOfDay);
+        } else {
+            query = query.orderBy('createdAt', 'desc');
+        }
+
+        state.communityPostListener = query.onSnapshot(snapshot => {
+            state.communityPosts = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            renderCommunityPosts();
+        });
+    };
+    
+    const fetchTrendingData = () => {
+        // Most Liked This Week
+        const oneWeekAgo = new Date();
+        oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+        db.collection('community_posts')
+          .where('createdAt', '>=', oneWeekAgo)
+          .get()
+          .then(snapshot => {
+              const posts = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+              const sorted = posts.sort((a, b) => b.likes.length - a.likes.length).slice(0, 3);
+              renderTrendingPosts('most-liked-posts', sorted, 'likes');
+          });
+
+        // Most Commented in 24h
+        const oneDayAgo = new Date();
+        oneDayAgo.setDate(oneDayAgo.getDate() - 1);
+        db.collection('community_posts')
+          .where('createdAt', '>=', oneDayAgo)
+          .orderBy('createdAt', 'desc')
+          .get()
+          .then(snapshot => {
+              const posts = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+              const sorted = posts.sort((a, b) => (b.commentCount || 0) - (a.commentCount || 0)).slice(0, 3);
+              renderTrendingPosts('most-commented-posts', sorted, 'comments');
+          });
+    };
+
+    const renderTrendingPosts = (containerId, posts, type) => {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        if (posts.length === 0) {
+            container.innerHTML = `<p class="text-sm text-gray-500">No trending posts right now.</p>`;
+            return;
+        }
+        container.innerHTML = posts.map(post => `
+            <a href="#" class="block hover:bg-gray-50 p-2 rounded-md trending-post-link" data-post-id="${post.id}">
+                <p class="text-sm font-semibold truncate">${post.content}</p>
+                <p class="text-xs text-gray-500">${type === 'likes' ? `${post.likes.length} likes` : `${post.commentCount || 0} comments`}</p>
+            </a>
+        `).join('');
+    };
+    
+    const fetchLiveThread = () => {
+        db.collection('community_posts').where('isLiveThread', '==', true).limit(1)
+        .onSnapshot(snapshot => {
+            const banner = document.getElementById('live-thread-banner');
+            if (snapshot.empty) {
+                banner.classList.add('hidden');
+                banner.innerHTML = '';
+            } else {
+                const livePost = { id: snapshot.docs[0].id, ...snapshot.docs[0].data() };
+                banner.innerHTML = `
+                    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-lg shadow" role="alert">
+                        <div class="flex items-center">
+                            <div class="py-1"><svg class="fill-current h-6 w-6 text-red-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zM9 11v4h2v-4H9zm0-4h2v2H9V7z"/></svg></div>
+                            <div>
+                                <p class="font-bold">🔴 LIVE THREAD</p>
+                                <p class="text-sm">${livePost.content.substring(0, 100)}...</p>
+                                <a href="#" class="font-bold underline live-thread-link" data-post-id="${livePost.id}">Join the conversation!</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                banner.classList.remove('hidden');
+            }
+        });
+    };
+
+    // --- NOTIFICATION LOGIC ---
+    let notificationListener = null;
+    const setupNotificationListener = (userId) => {
+        if (notificationListener) notificationListener(); // Unsubscribe from old listener
+
+        let isInitialLoad = true; // *** FIX: Flag to prevent toast on initial load ***
+
+        notificationListener = db.collection('notifications')
+            .where('recipientId', '==', userId)
+            .orderBy('timestamp', 'desc')
+            .onSnapshot(snapshot => {
+                const newNotifications = [];
+                snapshot.docChanges().forEach(change => {
+                    if (change.type === 'added') {
+                        const notification = { id: change.doc.id, ...change.doc.data() };
+                        if (!state.notifications.some(n => n.id === notification.id)) {
+                             newNotifications.push(notification);
+                        }
+                    }
+                });
+                
+                state.notifications = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                updateNotificationUI();
+
+                // *** FIX: Check isInitialLoad flag before showing toast ***
+                if (!isInitialLoad && newNotifications.length > 0 && document.hasFocus()) {
+                    const latestNotification = newNotifications[0];
+                    showToast(`New message from ${latestNotification.senderName}: "${latestNotification.message}"`);
+                    const synth = new Tone.Synth().toDestination();
+                    synth.triggerAttackRelease("C4", "8n");
+                }
+                
+                isInitialLoad = false; // Set flag to false after the first run
+            });
+    };
+
+    const updateNotificationUI = () => {
+        const badge = document.getElementById('notification-badge');
+        const list = document.getElementById('notification-list');
+        const unreadCount = state.notifications.filter(n => !n.isRead).length;
+
+        if (unreadCount > 0) {
+            badge.textContent = unreadCount;
+            badge.classList.remove('hidden');
+        } else {
+            badge.classList.add('hidden');
+        }
+
+        if (state.notifications.length === 0) {
+            list.innerHTML = `<p class="p-4 text-sm text-gray-500">No new notifications.</p>`;
+        } else {
+            list.innerHTML = state.notifications.map(n => `
+                <a href="#" class="block p-4 hover:bg-gray-100 border-b notification-item" data-post-id="${n.postId}" data-notification-id="${n.id}">
+                    <p class="text-sm"><strong>${n.senderName}</strong> mentioned you:</p>
+                    <p class="text-sm text-gray-600 truncate">"${n.message}"</p>
+                    <p class="text-xs text-gray-400 mt-1">${timeAgo(n.timestamp.toDate())}</p>
+                </a>
             `).join('');
         }
     };
 
-    // --- CHECKOUT & ORDER LOGIC ---
-    const handleCheckout = () => {
-        toggleCartModal(false);
-        checkoutModal.classList.remove('hidden');
-        document.getElementById('checkout-form').classList.remove('hidden');
-        document.getElementById('order-confirmation').classList.add('hidden');
-    };
-    
-    const handleConfirmOrder = async () => {
-        const orderPayload = {
-            customerName: "Test User", // In real app, get from form
-            customerEmail: "test@example.com",
-            items: state.cart,
-            total: state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
-            paymentMethod: document.querySelector('input[name="payment"]:checked').value,
-            status: "Pending",
-            timestamp: new Date().toISOString()
-        };
-        
-        // Post to Google Sheet
-        const result = await postData('orders', orderPayload);
-        
-        // Show confirmation
-        document.getElementById('checkout-form').classList.add('hidden');
-        document.getElementById('order-confirmation').classList.remove('hidden');
-        
-        // Clear cart
-        state.cart = [];
-        updateCart();
-    };
+    const markNotificationsAsRead = () => {
+        const unreadIds = state.notifications.filter(n => !n.isRead).map(n => n.id);
+        if (unreadIds.length === 0) return;
 
-    // --- DASHBOARD LOGIC ---
-    const updateDashboardView = () => {
-        if (state.isLoggedIn) {
-            document.getElementById('login-view').classList.add('hidden');
-            document.getElementById('dashboard-view').classList.remove('hidden');
-            renderWishlist();
-            // In a real app, you would fetch and render order history here.
-        } else {
-            document.getElementById('login-view').classList.remove('hidden');
-            document.getElementById('dashboard-view').classList.add('hidden');
-        }
+        const batch = db.batch();
+        unreadIds.forEach(id => {
+            const ref = db.collection('notifications').doc(id);
+            batch.update(ref, { isRead: true });
+        });
+        batch.commit().catch(err => {
+            console.error("Failed to mark notifications as read:", err);
+        });
     };
 
     // --- EVENT LISTENERS ---
-    document.addEventListener('DOMContentLoaded', async () => {
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentYearEl = document.getElementById('current-year');
+        if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
         
-        // Fetch all data on initial load
-        const [products, testimonials, blogPosts] = await Promise.all([
-            fetchData('products'),
-            fetchData('testimonials'),
-            fetchData('blogPosts')
-        ]);
-        
-        state.products = products;
-        state.testimonials = testimonials;
-        state.blogPosts = blogPosts;
+        const datePickerEl = document.getElementById('post-date-picker');
+        datePickerEl.style.display = 'none';
+        flatpickr(datePickerEl, {
+            dateFormat: "Y-m-d",
+            onChange: function(selectedDates, dateStr, instance) {
+                fetchCommunityPosts();
+            }
+        });
 
-        // Render initial page content
-        renderFeaturedProducts();
-        renderTestimonials();
-        renderHomeCategories();
-        renderShopProducts();
-        renderShopFilters();
-        renderBlogPosts();
-        updateDashboardView();
+        setupRealtimeListeners();
+        
+        // NEW: Load the last visited page
+        const savedPage = localStorage.getItem('bwire-shop-currentPage');
+        if (savedPage && pages[savedPage]) {
+            showPage(savedPage);
+        } else {
+            showPage('home');
+        }
     });
 
+    const loginFormEl = document.getElementById('login-form');
+    if (loginFormEl) loginFormEl.addEventListener('submit', handleLogin);
+    
+    const signupFormEl = document.getElementById('signup-form');
+    if (signupFormEl) signupFormEl.addEventListener('submit', handleSignUp);
+
+    const forgotPasswordFormEl = document.getElementById('forgot-password-form');
+    if (forgotPasswordFormEl) forgotPasswordFormEl.addEventListener('submit', handlePasswordReset);
+
+    const logoutButtonEl = document.getElementById('logout-button');
+    if (logoutButtonEl) logoutButtonEl.addEventListener('click', handleLogout);
+    
+    document.getElementById('show-signup')?.addEventListener('click', (e) => { e.preventDefault(); switchAuthForm('signup-form'); });
+    document.getElementById('show-login')?.addEventListener('click', (e) => { e.preventDefault(); switchAuthForm('login-form'); });
+    document.getElementById('show-forgot-password')?.addEventListener('click', (e) => { e.preventDefault(); switchAuthForm('forgot-password-form'); });
+    document.getElementById('show-login-from-reset')?.addEventListener('click', (e) => { e.preventDefault(); switchAuthForm('login-form'); });
+    document.getElementById('cancel-reset-token-button')?.addEventListener('click', () => {
+        if (resetTokenModal) {
+            resetTokenModal.classList.add('hidden');
+            document.getElementById('reset-token-form').reset();
+        }
+        if (authView) authView.classList.remove('hidden');
+        switchAuthForm('login-form');
+    });
+
+    const togglePasswordVisibility = (inputId, buttonId) => {
+        const input = document.getElementById(inputId);
+        const button = document.getElementById(buttonId);
+        if (input.type === 'password') {
+            input.type = 'text';
+            button.textContent = 'Hide';
+        } else {
+            input.type = 'password';
+            button.textContent = 'Show';
+        }
+    };
+    document.getElementById('toggle-login-password')?.addEventListener('click', () => togglePasswordVisibility('login-password', 'toggle-login-password'));
+    document.getElementById('toggle-signup-password')?.addEventListener('click', () => togglePasswordVisibility('signup-password', 'toggle-signup-password'));
+
+    document.getElementById('edit-profile-btn')?.addEventListener('click', () => {
+        document.getElementById('profile-display-view').classList.add('hidden');
+        document.getElementById('profile-edit-view').classList.remove('hidden');
+    });
+    document.getElementById('cancel-edit-profile-btn')?.addEventListener('click', () => {
+        document.getElementById('profile-display-view').classList.remove('hidden');
+        document.getElementById('profile-edit-view').classList.add('hidden');
+    });
+    document.getElementById('edit-profile-form')?.addEventListener('submit', handleUpdateProfile);
+
+    document.querySelectorAll('#auth-view input, #reset-token-modal input').forEach(input => {
+        input.addEventListener('input', () => setInputError(input.id, false));
+    });
+    
+    const contactFormEl = document.getElementById('contact-form');
+    if (contactFormEl) {
+        contactFormEl.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const payload = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value,
+                date: firebase.firestore.FieldValue.serverTimestamp(),
+                read: false
+            };
+            
+            try {
+                await db.collection('contacts').add(payload);
+                showToast("Message sent! We'll get back to you soon.");
+                form.reset();
+            } catch (error) {
+                console.error("Failed to send message:", error);
+                showToast("Could not send message. Please try again.", true);
+            }
+        });
+    }
+
     document.addEventListener('click', (e) => {
-        // Navigation
         if (e.target.closest('.nav-link')) {
             e.preventDefault();
             const pageId = e.target.closest('.nav-link').dataset.page;
             showPage(pageId);
-            // Close mobile menu if open
-            document.getElementById('mobile-menu').classList.add('hidden');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) mobileMenu.classList.add('hidden');
         }
-        
-        // View Product
         if (e.target.closest('.view-product-btn')) {
             const productId = e.target.closest('.view-product-btn').dataset.id;
             renderProductPage(productId);
         }
-        
-        // Category link from home
         if (e.target.closest('.category-link')) {
             e.preventDefault();
             const category = e.target.closest('.category-link').dataset.category;
-            document.querySelector(`input[name="category-filter"][value="${category}"]`).checked = true;
+            const radio = document.querySelector(`input[name="category-filter"][value="${category}"]`);
+            if (radio) radio.checked = true;
             renderShopProducts({ category });
             showPage('shop');
         }
-
-        // Add to Cart
         if (e.target.closest('.add-to-cart-btn')) {
             const productId = e.target.closest('.add-to-cart-btn').dataset.id;
             addToCart(productId);
         }
-        
-        // Add to Wishlist
         if (e.target.closest('.add-to-wishlist-btn')) {
             const productId = e.target.closest('.add-to-wishlist-btn').dataset.id;
-            addToWishlist(productId);
+            toggleWishlist(productId);
         }
-
-        // Cart actions
-        if (e.target.id === 'cart-button') toggleCartModal(true);
-        if (e.target.id === 'close-cart-button' || e.target.closest('#close-cart-button')) toggleCartModal(false);
+        if (e.target.closest('.remove-from-wishlist-btn')) {
+            const productId = e.target.closest('.remove-from-wishlist-btn').dataset.id;
+            toggleWishlist(productId);
+        }
+        if (e.target.closest('#cart-button')) {
+            if (cartModal) {
+                cartModal.classList.remove('hidden');
+                document.getElementById('cart-panel')?.classList.remove('translate-x-full');
+            }
+        }
+        if (e.target.closest('#close-cart-button')) {
+             document.getElementById('cart-panel')?.classList.add('translate-x-full');
+             if (cartModal) setTimeout(() => cartModal.classList.add('hidden'), 300);
+        }
         if (e.target.closest('.remove-from-cart-btn')) {
             const productId = e.target.closest('.remove-from-cart-btn').dataset.id;
             removeFromCart(productId);
         }
-        
-        // Checkout actions
         if (e.target.id === 'checkout-button') handleCheckout();
-        if (e.target.id === 'close-checkout-button') checkoutModal.classList.add('hidden');
+        if (e.target.id === 'close-checkout-button') checkoutModal?.classList.add('hidden');
         if (e.target.id === 'confirm-order-button') handleConfirmOrder();
-        if (e.target.id === 'close-confirmation-button') checkoutModal.classList.add('hidden');
-        
-        // Mobile Menu
+        if (e.target.id === 'close-confirmation-button') {
+            if (checkoutModal) checkoutModal.classList.add('hidden');
+            document.getElementById('checkout-form')?.classList.remove('hidden');
+            document.getElementById('order-confirmation')?.classList.add('hidden');
+        }
         if (e.target.closest('#mobile-menu-button')) {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+            document.getElementById('mobile-menu')?.classList.toggle('hidden');
         }
-        
-        // Dashboard
-        if (e.target.id === 'login-button') {
-            state.isLoggedIn = true;
-            updateDashboardView();
-            showToast("Logged in successfully (simulated).");
+        if (e.target.id === 'create-post-btn') handleCreatePost();
+        if (e.target.closest('.like-button')) handleToggleLike(e.target.closest('.like-button').dataset.id);
+        if (e.target.closest('.add-comment-btn')) handleAddComment(e.target.closest('.add-comment-btn').dataset.id);
+        if (e.target.closest('.add-reply-btn')) {
+            const btn = e.target.closest('.add-reply-btn');
+            handleAddComment(btn.dataset.postId, btn.dataset.parentId);
         }
-        if (e.target.id === 'logout-button') {
-            state.isLoggedIn = false;
-            updateDashboardView();
-            showToast("Logged out.");
+        if (e.target.closest('.delete-post-btn')) handleDeletePost(e.target.closest('.delete-post-btn').dataset.id);
+        if (e.target.closest('.delete-comment-btn')) {
+            const btn = e.target.closest('.delete-comment-btn');
+            handleDeleteComment(btn.dataset.postId, btn.dataset.commentId);
+        }
+        if (e.target.closest('.reply-btn')) {
+            const commentId = e.target.closest('.reply-btn').dataset.commentId;
+            const replyForm = document.getElementById(`reply-form-${commentId}`);
+            if (replyForm) replyForm.classList.toggle('hidden');
+        }
+        if (e.target.closest('.cancel-reply-btn')) {
+            const commentId = e.target.closest('.cancel-reply-btn').dataset.commentId;
+            const replyForm = document.getElementById(`reply-form-${commentId}`);
+            if (replyForm) replyForm.classList.add('hidden');
+        }
+        if (e.target.closest('.view-replies-btn')) {
+            const btn = e.target.closest('.view-replies-btn');
+            const commentId = btn.dataset.commentId;
+            const repliesContainer = btn.nextElementSibling;
+            const arrow = btn.querySelector('svg');
+            if (repliesContainer) {
+                repliesContainer.classList.toggle('hidden');
+                arrow.classList.toggle('rotate-180');
+            }
+        }
+        if (e.target.closest('.trending-post-link, .live-thread-link, .notification-item')) {
+            e.preventDefault();
+            const postId = e.target.closest('[data-post-id]').dataset.postId;
+            const postElement = document.getElementById(`post-${postId}`);
+            if (postElement) {
+                showPage('community');
+                postElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                postElement.classList.add('shadow-lg', 'ring-2', 'ring-electric-blue');
+                setTimeout(() => postElement.classList.remove('shadow-lg', 'ring-2', 'ring-electric-blue'), 3000);
+            }
+        }
+        if (e.target.closest('#notification-bell')) {
+            document.getElementById('notification-dropdown').classList.toggle('hidden');
+            if (!document.getElementById('notification-dropdown').classList.contains('hidden')) {
+                markNotificationsAsRead();
+            }
+        }
+        // NEW: Handle comment likes
+        if (e.target.closest('.comment-like-btn')) {
+            const btn = e.target.closest('.comment-like-btn');
+            handleToggleCommentLike(btn.dataset.postId, btn.dataset.commentId);
         }
     });
-    
-    // Input event listeners
+
     document.addEventListener('input', (e) => {
-        // Cart quantity
         if (e.target.classList.contains('quantity-input')) {
             const productId = e.target.dataset.id;
             const quantity = e.target.value;
             updateCartQuantity(productId, quantity);
         }
-        // Price filter
         if (e.target.id === 'filter-price') {
-            document.getElementById('price-filter-value').textContent = formatCurrency(e.target.value);
+            const priceFilterValue = document.getElementById('price-filter-value');
+            if(priceFilterValue) priceFilterValue.textContent = formatCurrency(e.target.value);
         }
     });
     
-    // Filter buttons
-    document.getElementById('apply-filters').addEventListener('click', () => {
-        const category = document.querySelector('input[name="category-filter"]:checked')?.value;
-        const brand = [...document.querySelectorAll('.filter-brand-checkbox:checked')].map(cb => cb.value)[0]; // Simplified to single brand for now
-        const maxPrice = document.getElementById('filter-price').value;
-        
-        renderShopProducts({ category, brand, maxPrice });
+    // NEW: Add keydown listener for Enter to send
+    document.addEventListener('keydown', (e) => {
+        const targetId = e.target.id;
+        if (e.key === 'Enter' && !e.shiftKey) {
+            if (targetId === 'post-content') {
+                e.preventDefault();
+                document.getElementById('create-post-btn').click();
+            } else if (targetId && (targetId.startsWith('comment-input-') || targetId.startsWith('reply-input-'))) {
+                e.preventDefault();
+                e.target.nextElementSibling.click(); // Click the 'Send' button next to the input
+            }
+        }
     });
 
-    document.getElementById('reset-filters').addEventListener('click', () => {
-        document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(i => i.checked = false);
-        document.getElementById('filter-price').value = 150000;
-        document.getElementById('price-filter-value').textContent = formatCurrency(150000);
-        renderShopProducts();
+    document.getElementById('sort-posts')?.addEventListener('change', (e) => {
+        const datePickerEl = document.getElementById('post-date-picker');
+        const fpInstance = datePickerEl._flatpickr; // FIX: Get instance from element
+        if (e.target.value === 'by-date') {
+            datePickerEl.style.display = 'block';
+            if (fpInstance) {
+                fpInstance.open(); // Open calendar on mobile
+            }
+        } else {
+            datePickerEl.style.display = 'none';
+        }
+        fetchCommunityPosts();
     });
+
+    const applyFiltersBtn = document.getElementById('apply-filters');
+    if (applyFiltersBtn) {
+        applyFiltersBtn.addEventListener('click', () => {
+            const category = document.querySelector('input[name="category-filter"]:checked')?.value;
+            const brand = [...document.querySelectorAll('.filter-brand-checkbox:checked')].map(cb => cb.value)[0];
+            const maxPrice = document.getElementById('filter-price').value;
+            renderShopProducts({ category, brand, maxPrice });
+        });
+    }
+
+    const resetFiltersBtn = document.getElementById('reset-filters');
+    if (resetFiltersBtn) {
+        resetFiltersBtn.addEventListener('click', () => {
+            document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(i => i.checked = false);
+            const filterPrice = document.getElementById('filter-price');
+            const priceFilterValue = document.getElementById('price-filter-value');
+            if (filterPrice) filterPrice.value = 150000;
+            if (priceFilterValue) priceFilterValue.textContent = formatCurrency(150000);
+            renderShopProducts();
+        });
+    }
+    // --- HACKER AURA DETECTION ---
+console.log(`
+🚨 ALERT: Hacker Aura Detected! 🚨
+Welcome, code warrior.
+Author       : eugz_asax
+Project      : Bwire Aesthetics
+Version      : 8.2.1
+Last Edit    : 2025-08-20 03:56am
+
+╔══╗ ╔══╗ ╔══╗ ╔══╗ ╔══╗
+║░░║ ║░░║ ║░░║ ║░░║ ║░░║
+║░░║ ║░░║ ║░░║ ║░░║ ║░░║
+╚══╝ ╚══╝ ╚══╝ ╚══╝ ╚══╝
+
+🔒 Hacker Aura: 100%
+🔑 Signature Key: eugz_asax
+
+Only coders with courage dare inspect further.
+Keep it secret. Keep it slick.
+`);
+
+
     
-    // Contact Form submission
-    document.getElementById('contact-form').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const formData = new FormData(form);
-        const payload = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            message: formData.get('message'),
-            timestamp: new Date().toISOString()
-        };
-        
-        const result = await postData('contacts', payload);
-        showToast("Message sent! We'll get back to you soon.");
-        form.reset();
-    });
-
     </script>
+    
 </body>
 </html>

@@ -10,20 +10,20 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-// ✅ Enable CORS for testing (any origin)
+// CORS - Any Origin
 app.use(cors({
   origin: "*",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"]
 }));
 
-// ✅ Ensure uploads folder exists
+// Uploads Folder
 const uploadDir = path.join(__dirname, "uploads");
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir);
 }
 
-// ✅ Configure multer storage
+// Multer Storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, uploadDir);
@@ -35,7 +35,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// ✅ Upload route
+// Upload Route
 app.post("/upload", upload.single("image"), (req, res) => {
   try {
     if (!req.file) {
@@ -49,10 +49,10 @@ app.post("/upload", upload.single("image"), (req, res) => {
   }
 });
 
-// ✅ Serve static files from /uploads
+// Serve static files from /uploads
 app.use("/uploads", express.static(uploadDir));
 
-// ✅ Basic test route
+// Basic test route
 app.get("/ping", (req, res) => {
   res.json({ status: "ok", message: "Server is live 🚀" });
 });

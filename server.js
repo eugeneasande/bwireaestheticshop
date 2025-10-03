@@ -27,8 +27,13 @@ app.post("/upload", upload.single("image"), (req, res) => {
   res.json({ success: true, url: fileUrl });
 });
 
-// serve uploads
+// serve static uploads
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
+// frontend page
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Media server running on :${port}`));
+app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
